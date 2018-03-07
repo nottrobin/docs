@@ -97,7 +97,7 @@ subsequent requests will be satisfied by the LXD cache (`/var/lib/lxd/images`).
 Cached images can be seen with `lxc image list`:
 
 
-![lxc image list after importing](./media/image_list-imported_image-reduced70.png)
+![lxc image list after importing](../media/image_list-imported_image-reduced70.png)
 
 Image cache expiration and image synchronization mechanisms are built-in.
 
@@ -106,7 +106,7 @@ Image cache expiration and image synchronization mechanisms are built-in.
 When working with remote users on different machines (see [Creating
 users][users] for details on adding users, registering them and granting them
 permissions), LXD-hosted controllers need to generate a specific certificate
-credential which is shared with the remote machine. 
+credential which is shared with the remote machine.
 
 To do this, first run `juju autoload-credentials` on the LXD host. This
 will generate output similar to the following:
@@ -137,7 +137,7 @@ certificate credential can be imported with the following command:
 ```bash
 juju add-credential localhost -f localhost-credentials.yaml
 ```
-See [Cloud credentials][credentials] for more details on how credentials are used. 
+See [Cloud credentials][credentials] for more details on how credentials are used.
 
 ### Logs
 

@@ -31,7 +31,7 @@ juju deploy mysql
 This will create a machine and use the latest online MySQL charm (for your
 default series) to deploy a MySQL application.
 
-!!! Note: 
+!!! Note:
     The default series can be configured at a model level, see
     [Configuring models][models] for further details. In the absence of this
     setting, the default is to use the series specified by the charm.
@@ -164,7 +164,7 @@ for some applications it may be desirable (and quicker) to configure them at
 deployment time. This can be done whether a charm is deployed from the Charm
 Store or from a local charm.
 
-See [Application configuration](./charms-config.html) for more on this.
+See [Application configuration](../charms-config.html) for more on this.
 
 ## Deploying to specific machines and containers
 
@@ -299,7 +299,7 @@ extra bindable endpoint that is not a relation, see [Charm metadata][metadata].
 !!! Note:
     Juju's knowledge of the available spaces on the underlying cloud may lag
     behind recent changes. To force Juju to re-examine the spaces it can use,
-    you should run the command `juju reload-spaces`.  
+    you should run the command `juju reload-spaces`.
 
 ## Juju retry-provisioning
 
