@@ -1,5 +1,3 @@
-Title: Charms and MySQL interfaces  
-
 # mysql interface
 
 The mysql interface is provided by the mysql charm, and is required by a number

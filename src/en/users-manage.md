@@ -1,6 +1,3 @@
-Title: Juju user management
-
-
 # User management
 
 This section covers topics related to managing users at the administrative

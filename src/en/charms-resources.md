@@ -1,5 +1,7 @@
-Title: Resources
-TODO:  Critical: Improve examples
+<!--
+Todo:
+- Critical: Improve examples
+-->
 
 # Juju Resources
 

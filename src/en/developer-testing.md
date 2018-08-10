@@ -1,5 +1,3 @@
-Title: Writing charm tests
-
 # Writing Charm Tests
 
 Charm authors will have the best insight into whether or not a charm is working

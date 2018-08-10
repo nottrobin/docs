@@ -1,6 +1,7 @@
-Title: Additional LXD resources
-TODO:  Test certificate access
-table_of_contents: True
+<!--
+Todo:
+- Test certificate access
+-->
 
 # Additional LXD resources
 
@@ -61,10 +62,11 @@ cluster and any subsequent node will *join* the cluster. Once the cluster is
 set up a controller can be created, as normal, on any of the cluster nodes
 (e.g. `juju bootstrap localhost lxd-cluster`).
 
-!!! Warning:
-    The cluster-creation process will remove any existing containers. In a Juju
-    context, this implies that you cannot initialise a cluster *after* having
-    created a controller.
+[note=caution]
+The cluster-creation process will remove any existing containers. In a Juju
+context, this implies that you cannot initialise a cluster *after* having
+created a controller.
+[/note]
 
 See the upstream documentation on [Clustering][lxd-upstream-clustering].
 
@@ -149,10 +151,11 @@ First ensure that `snapd` is installed:
 sudo apt install snapd
 ```
 
-!!! Important:
-    On Ubuntu 14.04 LTS (Trusty), installing `snapd` will bring in a new kernel
-    (4.4.0 series) as a dependency. You will then **need to reboot**.
-    Attempting to install a snap without doing so will result in failure.
+[note=caution]
+On Ubuntu 14.04 LTS (Trusty), installing `snapd` will bring in a new kernel
+(4.4.0 series) as a dependency. You will then **need to reboot**.
+Attempting to install a snap without doing so will result in failure.
+[/note]
 
 Now install the LXD snap:
 
@@ -184,9 +187,10 @@ local provider log to `/var/log/lxd/juju-UUID-machine-ID`. However, the
 standard way to view logs is with the `debug-log` command (see the
 [Juju logs][logs] page for details).
 
-!!! Note:
-    For LXD snap users, the log directory is located at
-    `/var/snap/lxd/common/lxd/logs`.
+[note]
+For LXD snap users, the log directory is located at
+`/var/snap/lxd/common/lxd/logs`.
+[/note]
 
 ## Further help and reading
 

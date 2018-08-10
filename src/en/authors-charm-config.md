@@ -1,5 +1,3 @@
-Title: Creating config.yaml and configuring charms  
-
 # Charm configuration
 
 The charm author can use the optional `config.yaml` file to define a charm's

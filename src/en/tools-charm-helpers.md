@@ -1,5 +1,3 @@
-Title: Charm helpers  
-
 # Charm Helpers
 
 Charm Helpers is a Python library that simplifies charm development by

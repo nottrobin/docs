@@ -1,5 +1,3 @@
-Title: Event Cycle
-
 # Event Cycle
 
 When charming with the reactive framework, it’s possible to use
@@ -62,12 +60,13 @@ def waiting_mysql(mysql):
     status_set('waiting', 'Waiting for MySQL')
 ```
 
-!!! Note:
-    It is important to note that the instructions for this particular interface
-    are only applicable to this particular interface. Interfaces are unique to the
-    author’s implementation, and any states set will vary from interface to
-    interface. These states are documented in the interface layer repository
-    README.md file.
+[note]
+It is important to note that the instructions for this particular interface
+are only applicable to this particular interface. Interfaces are unique to the
+author’s implementation, and any states set will vary from interface to
+interface. These states are documented in the interface layer repository
+README.md file.
+[/note]
 
 ## Hook event cycle
 

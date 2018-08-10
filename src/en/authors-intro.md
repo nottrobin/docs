@@ -1,5 +1,3 @@
-Title: How to become a Juju charm author
-
 # Becoming a charm author
 
 Juju makes deploying cloud applications spectacularly easy. One of the key

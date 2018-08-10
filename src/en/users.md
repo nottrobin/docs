@@ -1,7 +1,8 @@
-Title: Juju and users
-TODO: User abilities, especially owners and regular users
-      Critical: review required
-
+<!--
+Todo:
+- User abilities, especially owners and regular users
+- Critical: review required
+-->
 
 # Juju users
 

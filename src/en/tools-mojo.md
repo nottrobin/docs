@@ -1,5 +1,3 @@
-Title: Mojo
-
 # Mojo
 
 The Mojo package provides tools to install, configure, and verify Juju-based

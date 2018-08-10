@@ -1,5 +1,3 @@
-Title: Configure metrics gathering with Prometheus
-
 #  Configure metrics gathering with Prometheus
 
 ## Overview

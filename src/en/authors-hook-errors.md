@@ -1,5 +1,3 @@
-Title: Dealing with errors encountered by charm hooks  
-
 # Hook errors
 
 If any of your hooks returns a non-zero exit code, juju will stop managing the

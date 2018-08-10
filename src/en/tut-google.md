@@ -1,10 +1,12 @@
-Title: Creating additional controllers
-TODO:  Still WIP: needs refinement and further details
-       Remove default model?
-       Image for GCE Dashboard with resources
-       Image commented out due to inconsistent behaviour
-       This tutorial is top-heavy with GUI stuff. Consider a GUI tutorial
-       Menu entry, page title, and top header do not correspond
+<!--
+Todo:
+- Still WIP: needs refinement and further details
+- Remove default model?
+- Image for GCE Dashboard with resources
+- Image commented out due to inconsistent behaviour
+- This tutorial is top-heavy with GUI stuff. Consider a GUI tutorial
+- Menu entry, page title, and top header do not correspond
+-->
 
 # Create a Google Compute Engine controller
 
@@ -15,10 +17,11 @@ less than 10 minutes. But you could just as easily use Amazon AWS or Microsoft
 Azure, and just as easily deploy Kubernetes, Cassandra or even OpenStack. It's
 the magic of Juju that makes it happen.
 
-!!! Note:
-    If you already have a controller, such as the one created in the
-    [Getting started with Juju and LXD][tut-lxd] page, this new controller will
-    be seamlessly added alongside.
+[note]
+If you already have a controller, such as the one created in the
+[Getting started with Juju and LXD][tut-lxd] page, this new controller will
+be seamlessly added alongside.
+[/note]
 
 ## Installation
 

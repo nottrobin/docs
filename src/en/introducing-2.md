@@ -1,6 +1,8 @@
-Title: Introducing Juju 2.0
-TODO:  Add extra changes as required
-       Critical: review required
+<!--
+Todo:
+- Add extra changes as required
+- Critical: review required
+-->
 
 # Introducing Juju 2.0
 

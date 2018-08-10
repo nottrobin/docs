@@ -1,6 +1,3 @@
-Title: Exposing applications    
-
-
 # Exposing applications
 
 By design, Juju operates a very secure environment for deploying your
@@ -57,9 +54,10 @@ As you can see in the above example, the `wordpress` app is marked as 'exposed'
 in the Notes column, meaning that the application is running and available to
 users via its public address of 35.227.27.40.
 
-!!! Note:
-    Exposing the application does not change any DNS or other settings 
-    which may be necessary to get your application running as you expect.
+[note]
+Exposing the application does not change any DNS or other settings 
+which may be necessary to get your application running as you expect.
+[/note]
 
 # Unexposing an application
 

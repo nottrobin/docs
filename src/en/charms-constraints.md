@@ -1,7 +1,9 @@
-Title: Using constraints
-TODO:  Important: include default resources requested for non-constrained machine
-       bug tracking: https://bugs.launchpad.net/juju/+bug/1768308
-       Consider a diagram for the Defaults section
+<!--
+Todo:
+- Important: include default resources requested for non-constrained machine
+- bug tracking: https://bugs.launchpad.net/juju/+bug/1768308
+- Consider a diagram for the Defaults section
+-->
 
 # Using constraints
 
@@ -102,10 +104,11 @@ Here, we want to ensure that the controller has at least two CPUs.
 See [Creating a controller][controllers-creating] for details and further
 examples.
 
-!!! Note:
-    Constraints applied with '--bootstrap-constraints' will automatically apply
-    to any future controllers provisioned for high availability. See
-    [Controller high availability][controllers-ha].
+[note]
+Constraints applied with '--bootstrap-constraints' will automatically apply
+to any future controllers provisioned for high availability. See
+[Controller high availability][controllers-ha].
+[/note]
 
 ## Setting constraints for the controller and the default models
 
@@ -119,10 +122,11 @@ juju bootstrap --constraints mem=4G aws
 
 See [Creating a controller][controllers-creating] for more guidance.
 
-!!! Important:
-    Individual constraints from `--bootstrap-constraints` override any
-    identical constraints from `--constraints` if these options are used in
-    combination.
+[note=caution]
+Individual constraints from `--bootstrap-constraints` override any
+identical constraints from `--constraints` if these options are used in
+combination.
+[/note]
 
 For the LXD cloud, the following invocation will place a **limit** of 2GiB of
 memory for each machine:
@@ -175,9 +179,10 @@ To deploy MySQL on a machine that has at least 6 GiB of memory and 2 CPUs:
 juju deploy mysql --constraints "mem=6G cores=2"
 ```
 
-!!! Note:
-    Multiple constraints are space-separated and placed within quotation
-    marks.
+[note]
+Multiple constraints are space-separated and placed within quotation
+marks.
+[/note]
 
 To deploy Apache and ensure its machine will have 4 GiB of memory (or more) as
 well as ignore a possible `cores` constraint (previously set at either the
@@ -219,10 +224,11 @@ juju set-constraints mariadb cores=2
 
 An application's default cannot be set until the application has been deployed.
 
-!!! Note:
-    Both the `get-constraints` and `set-constraints` commands work with
-    application custom names. See [Deploying applications][charms-deploying]
-    for how to set a custom name.
+[note]
+Both the `get-constraints` and `set-constraints` commands work with
+application custom names. See [Deploying applications][charms-deploying]
+for how to set a custom name.
+[/note]
 
 ## Setting constraints when adding a machine
 

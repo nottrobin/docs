@@ -1,5 +1,7 @@
-Title: CMR scenario #1
-TODO:  Update 'juju status' output to show release versions
+<!--
+Todo:
+- Update 'juju status' output to show release versions
+-->
 
 # CMR scenario #1
 
@@ -53,9 +55,10 @@ models by referring to interface 'mysql:db' with the `juju offer` command:
 juju offer mysql:db
 ```
 
-!!! Note:
-    See [Managing relations][charms-relations] for how to determine the
-    interface used in the `juju offer` command.
+[note]
+See [Managing relations][charms-relations] for how to determine the
+interface used in the `juju offer` command.
+[/note]
 
 The output will include the shared application's endpoint:
 

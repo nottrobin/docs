@@ -1,6 +1,8 @@
-Title: Implementing Relations in Juju charms  
-TODO:  Error: the metadata file does not give relation names. It gives endpoint names.
-       Review required
+<!--
+Todo:
+- Error: the metadata file does not give relation names. It gives endpoint names.
+- Review required
+-->
 
 # What is a relation?
 
@@ -18,9 +20,10 @@ set the same settings as do all the other charms with the same role for the
 interface; and you should only expect to be able to read those settings set by
 the other charms with the counterpart role.
 
-!!! Important:
-    Applications form relations based on interface names only. They have to
-    match.
+[note=caution]
+Applications form relations based on interface names only. They have to
+match.
+[/note]
 
 ## Relation composition
 

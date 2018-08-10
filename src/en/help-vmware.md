@@ -1,5 +1,7 @@
-Title: Using VMware vSphere with Juju
-TODO:  Review required
+<!--
+Todo:
+- Review required
+-->
 
 # Using VMware vSphere with Juju
 
@@ -161,16 +163,18 @@ juju bootstrap myvscloud myvscloud-controller \
 	--config datastore=NFSSTORE
 ```
 
-!!! Note:
-    When you specify these options in the bootstrap command, they will only
-    apply to the 'controller' and 'default' models. Use
-    [`model-defaults`](./models-config.html) if you want all new models to use
-    those options.
+[note]
+When you specify these options in the bootstrap command, they will only
+apply to the 'controller' and 'default' models. Use
+[`model-defaults`](./models-config.html) if you want all new models to use
+those options.
+[/note]
 
-!!! Note:
-    When bootstrapping Juju with vSphere, Juju downloads a cloud image to
-    the Juju client machine and then uploads it to your cloud. If you're far
-    away from the cluster, this may take some time.
+[note]
+When bootstrapping Juju with vSphere, Juju downloads a cloud image to
+the Juju client machine and then uploads it to your cloud. If you're far
+away from the cluster, this may take some time.
+[/note]
 
 ## Troubleshooting
 

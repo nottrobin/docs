@@ -1,5 +1,3 @@
-Title: DHX debug plugin  
-
 # DHX: A Customized Hook Debugging Environment Plugin
 
 [DHX](https://github.com/juju/plugins/blob/master/juju-dhx) is a plugin --

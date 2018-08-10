@@ -1,8 +1,9 @@
-Title: Creating a Juju Controller
-TODO:  Improve examples
-       Hardcoded: Ubuntu code names
-       Update default controller release (to "latest LTS") and remove Note once 18.04.1 released
-
+<!--
+Todo:
+- Improve examples
+- Hardcoded: Ubuntu code names
+- Update default controller release (to "latest LTS") and remove Note once 18.04.1 released
+-->
 
 # Creating a controller
 
@@ -57,9 +58,10 @@ that:
 juju bootstrap localhost lxd-xenial
 ```
 
-!!! Note:
-    The default release will change from Xenial to Ubuntu 18.04 LTS (Bionic)
-    once 18.04.1 is released (July 2018).
+[note]
+The default release will change from Xenial to Ubuntu 18.04 LTS (Bionic)
+once 18.04.1 is released (July 2018).
+[/note]
 
 To select a different series the `--bootstrap-series` option is used.
 
@@ -196,8 +198,9 @@ vpc-id-force:
     the minimum validation criteria. Not accepted without vpc-id
 ```
 
-!!! Note:
-    The VPC ID is obtained from the AWS web UI.
+[note]
+The VPC ID is obtained from the AWS web UI.
+[/note]
 
 Secondly, create the controller by placing it (and its models) within it:
 
@@ -205,9 +208,10 @@ Secondly, create the controller by placing it (and its models) within it:
 juju boootstrap --config vpc-id=vpc-86f7bbe1 aws
 ```
 
-!!! Note:
-    Cloud-specific features can also be passed to individual models during
-    their creation (`add-model`).
+[note]
+Cloud-specific features can also be passed to individual models during
+their creation (`add-model`).
+[/note]
 
 
 <!-- LINKS -->

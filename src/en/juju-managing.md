@@ -1,6 +1,3 @@
-Title: Managing Juju  
-
-
 # Managing Juju
 
 Distinct from deploying and managing Juju Charms, there are many Juju commands 

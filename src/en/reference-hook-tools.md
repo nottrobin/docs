@@ -1,6 +1,8 @@
-Title: Hook tools
-TODO:  rationalize with authors-hook-environment.md and authors-charm-writing.md
-       Convert to abstract links
+<!--
+Todo:
+- rationalize with authors-hook-environment.md and authors-charm-writing.md
+- Convert to abstract links
+-->
 
 # Hook tools
 
@@ -19,10 +21,11 @@ details on how to use payloads within your charms.
 Many of the tools produce text based output, and those that do accept
 a `--format` flag which can be set to json or yaml as desired.
 
-!!! Note: 
-    You can view a detailed listing of what each command listed below does
-    on your client with `juju help-tool {command}`. Or for more detailed help on
-    individual commands run the command with the -h flag.
+[note]
+You can view a detailed listing of what each command listed below does
+on your client with `juju help-tool {command}`. Or for more detailed help on
+individual commands run the command with the -h flag.
+[/note]
 
 ## action-fail
 
@@ -424,10 +427,11 @@ charm**. It does not, at the moment, include ports which may be opened by other
 charms co-hosted on the same machine
 [lp#1427770](https://bugs.launchpad.net/juju-core/+bug/1427770).
 
-!!! Note: 
-    Opening ports is transactional (i.e. will take place on successfully
-    exiting the current hook), and therefore `opened-ports` will not return any
-    values for pending `open-port` operations run from within the same hook.
+[note]
+Opening ports is transactional (i.e. will take place on successfully
+exiting the current hook), and therefore `opened-ports` will not return any
+values for pending `open-port` operations run from within the same hook.
+[/note]
 
 python:
 ```python
@@ -884,10 +888,11 @@ Note that if a unit has been deployed with `--bind space` then the address
 returned from `unit-get private-address` will get the address from this
 space, not the 'default' space.
 
-!!! Warning:
-    The call of `unit-get` in a networking context is deprecated and should
-    no longer be used. It is replaced by the `network-get` hook tool. See
-    [Network primitives][dev-network-primitives] for details.
+[note=caution]
+The call of `unit-get` in a networking context is deprecated and should
+no longer be used. It is replaced by the `network-get` hook tool. See
+[Network primitives][dev-network-primitives] for details.
+[/note]
 
 python:
 ```python

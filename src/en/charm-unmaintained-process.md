@@ -1,5 +1,3 @@
-Title: Unmaintained charms  
-
 # Unmaintained charms
 
 As a charm goes through its software life cycle it may become outdated if it is

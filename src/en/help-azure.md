@@ -1,6 +1,8 @@
-Title: Using Microsoft Azure with Juju
-TODO: Update azure-cli to use a snap when stable (checked 8 May 2018)
-      Possible to get a list of zones for each region? How can one specify a zone otherwise?
+<!--
+Todo:
+- Update azure-cli to use a snap when stable (checked 8 May 2018)
+- Possible to get a list of zones for each region? How can one specify a zone otherwise?
+-->
 
 # Using Microsoft Azure with Juju
 
@@ -33,12 +35,13 @@ Several steps are required to add Azure credentials to Juju:
  - Log in to Azure
  - Import the credentials
 
-!!! Note:
-    Credentials on the Azure cloud have been reported to expire. If a
-    previously working setup suddenly behaves as if incorrect credentials are
-    being used then you may need to update the credentials on the controller.
-    See [Updating remote credentials][updating-remote-credentials] for
-    guidance.
+[note]
+Credentials on the Azure cloud have been reported to expire. If a
+previously working setup suddenly behaves as if incorrect credentials are
+being used then you may need to update the credentials on the controller.
+See [Updating remote credentials][updating-remote-credentials] for
+guidance.
+[/note]
 
 ### Installing the CLI tool
 
@@ -51,10 +54,11 @@ Ubuntu/Linux users can install Azure CLI 2.0 with the following command:
 curl -L https://aka.ms/InstallAzureCli | bash
 ```
 
-!!! Note:
-    For instructions that cover installing Azure CLI on Microsoft Windows and
-    Apple macOS, see Microsoft's [Install Azure CLI 2.0][azuretwoinstall]
-    documentation.
+[note]
+For instructions that cover installing Azure CLI on Microsoft Windows and
+Apple macOS, see Microsoft's [Install Azure CLI 2.0][azuretwoinstall]
+documentation.
+[/note]
 
 If the installer encounters any difficulties it will let you know. Examples
 include the inability to find your system's Python interpreter or missing
@@ -129,11 +133,12 @@ The default choice is `interactive` and it is the recommended method. It is far
 quicker and easier than the manual `service-principal-secret` method. Here,
 we'll assume that 'interactive' has been chosen.
 
-!!! Note:
-    For guidance on the manual method, see
-    [Manually adding Azure credentials][manually-adding-azure-credentials]. Use
-    this method if the interactive option fails, or if you want to automate the
-    configuration process.
+[note]
+For guidance on the manual method, see
+[Manually adding Azure credentials][manually-adding-azure-credentials]. Use
+this method if the interactive option fails, or if you want to automate the
+configuration process.
+[/note]
 
 You then will be asked for your subscription id. In the example above, it is
 'f717c8c1-8e5e-4d38-be7f-ed1e1c879e18'. The recommended way is to simply press
@@ -173,10 +178,11 @@ Juju supports Azure availability sets. See the
 [Application high availability][azure-availability-sets] page for more
 details.
 
-!!! Note:
-    Azure accounts are initially limited to 10 cores (trial accounts can be
-    even lower). You will need to file a support ticket with Azure to raise
-    your quota limit.
+[note]
+Azure accounts are initially limited to 10 cores (trial accounts can be
+even lower). You will need to file a support ticket with Azure to raise
+your quota limit.
+[/note]
 
 ## Next steps
 

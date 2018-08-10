@@ -1,5 +1,3 @@
-Title: Troubleshooting additions
-
 # Troubleshooting additions
 
 This page offers specific troubleshooting tips when you try to add a Juju

@@ -1,4 +1,4 @@
-Title: Markdown rendering test  
+# Markdown rendering test
 
 #Rendering test page
 
@@ -40,9 +40,10 @@ This page is to test the rendering of various aspects of the markdown conversion
 
   #### levels
 
-!!! Note: 
-    Admonitions should appear highlighted and may also contain elements
-    such as _emphasis of words_ and ``` inline code```
+[note]
+Admonitions should appear highlighted and may also contain elements
+such as _emphasis of words_ and ``` inline code```
+[/note]
 
 Here are some highlighting tests:
 

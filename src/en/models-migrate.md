@@ -1,8 +1,9 @@
-Title: Migrating models
-TODO: Needs adding to navigation
-      How are subnet and end point bindings handled?
-      Check and add migration resources for different controllers
-
+<!--
+Todo:
+- Needs adding to navigation
+- How are subnet and end point bindings handled?
+- Check and add migration resources for different controllers
+-->
 
 # Migrating models
 
@@ -32,8 +33,9 @@ For migration to work:
   - The version of Juju running on the destination controller needs to be the
     same or newer than the version on the source controller.
 
-!!! Note: 
-    A controller model can not be migrated.
+[note]
+A controller model can not be migrated.
+[/note]
 
 ## Usage
 

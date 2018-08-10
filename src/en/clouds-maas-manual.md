@@ -1,5 +1,3 @@
-Title: Manually adding MAAS clouds
-
 # Manually adding MAAS clouds
 
 A MAAS cloud may be registered with Juju using the interactive `add-cloud`

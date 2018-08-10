@@ -1,6 +1,8 @@
-Title: Sharing Clouds
-TODO:  change screenshot username from degville to newuser
-       add link to a table showing permissions for each type of user
+<!--
+Todo:
+- change screenshot username from degville to newuser
+- add link to a table showing permissions for each type of user
+-->
 
 # Sharing Clouds
 
@@ -167,9 +169,10 @@ juju revoke newuser write dev
 juju disable-user newuser
 ```
 
-!!! Note: 
-    A user can revoke write access for themselves and effectively lock
-    themselves out of being able to modify a model.
+[note]
+A user can revoke write access for themselves and effectively lock
+themselves out of being able to modify a model.
+[/note]
 
 With access revoked, the admin can now safely remove the model:
 

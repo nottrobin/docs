@@ -1,6 +1,3 @@
-Title: Implementing actions in Juju charms  
-
-
 # Actions for the charm author
 
 Actions are executables associated with a charm that may be invoked by the user.
@@ -24,10 +21,11 @@ Every implemented action must include:
  - the executable's name as a top-level key in a YAML map in the `actions.yaml`
    file.
 
-!!! Note: 
-    Action names must start and end with lowercase alphanumeric
-    characters, and only contain lowercase alphanumeric characters, the hyphen "-"
-    or full stop"." characters.
+[note]
+Action names must start and end with lowercase alphanumeric
+characters, and only contain lowercase alphanumeric characters, the hyphen "-"
+or full stop"." characters.
+[/note]
 
 Here is a sample partial layout of a charm's root directory that shows actions
 called 'pause', 'resume', and 'snapshot':

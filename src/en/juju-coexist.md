@@ -1,8 +1,10 @@
-Title: Running multiple versions of Juju
-TODO: Update when upgrade path is available
-      Add information for MacOS
-      Add information for Windows
-      
+<!--
+Todo:
+- Update when upgrade path is available
+- Add information for MacOS
+- Add information for Windows
+-->
+
 # Running multiple versions of Juju
 
 You may wish to use the new 2.x series of Juju releases for new projects, 

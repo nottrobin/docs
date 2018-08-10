@@ -1,5 +1,3 @@
-Title: Implementing leadership in Juju charms  
-
 # Leadership for the Charm author
 
 Leadership provides a mechanism whereby multiple units of an application can
@@ -129,13 +127,14 @@ you just might want to call `set_shared_settings` in a few more places. If you
 need additional synchronisation, you can use a peer relation to communicate
 minions' acknowledgements back to the leader.
 
-!!! Note: 
-    Peer relation membership is not guaranteed to match current reality
-    at any given time. To be resilient in the face of your application scaling at
-    the same time as you (say) rebalance your application, your leader code will
-    need to use the output of `status-get --application` to determine up-to-date
-    membership, and wait for the set of acked units in the peer relation to match
-    that list.
+[note]
+Peer relation membership is not guaranteed to match current reality
+at any given time. To be resilient in the face of your application scaling at
+the same time as you (say) rebalance your application, your leader code will
+need to use the output of `status-get --application` to determine up-to-date
+membership, and wait for the set of acked units in the peer relation to match
+that list.
+[/note]
 
 ### ...guarantee that a long-lived process runs on just one unit at once?
 
@@ -163,10 +162,11 @@ efficient.
 
 ### ...render it likely that a long-lived process runs on one unit at a time?
 
-!!! Note: 
-    This approach is not reliable. It may be good enough for some
-    workloads, but don't use it unless you understand the forces in play and the
-    worst possible consequences for your users...
+[note]
+This approach is not reliable. It may be good enough for some
+workloads, but don't use it unless you understand the forces in play and the
+worst possible consequences for your users...
+[/note]
 
 If you start your long-lived process in `leader-elected`, and stop it in
 `leader-settings-changed`, this will *usually* do what you want, but is

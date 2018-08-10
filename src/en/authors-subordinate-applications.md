@@ -1,5 +1,3 @@
-Title: Subordinate applications  
-
 # Subordinate applications
 
 Applications are composed of one or more application units. An application unit runs the

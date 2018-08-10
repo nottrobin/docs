@@ -1,7 +1,8 @@
-Title: Charm bundles
-TODO:  Check more complex bundles after the release of 2.0
-       Add example portraying bundle overlay
-table_of_contents: True
+<!--
+Todo:
+- Check more complex bundles after the release of 2.0
+- Add example portraying bundle overlay
+-->
 
 # Charm bundles
 
@@ -70,8 +71,9 @@ run can be performed:
 juju deploy --dry-run wiki-simple
 ```
 
-!!! Note:
-    The `--dry-run` option works only with bundles, not with regular charms.
+[note]
+The `--dry-run` option works only with bundles, not with regular charms.
+[/note]
 
 You can get the name of a bundle from the [Juju Charm Store][charm-store], just
 as you would a charm. There, you can see icons representing each separate
@@ -211,9 +213,10 @@ creating a new bundle. This section presents the following methods:
  * Binding endpoints within a bundle
  * Bundles and charm resources
 
-!!! Note:
-    Make sure you've added a brief explanation of what your bundle does within
-    the `description` field of your bundle's YAML file. 
+[note]
+Make sure you've added a brief explanation of what your bundle does within
+the `description` field of your bundle's YAML file.
+[/note]
 
 ### Using local charms
 
@@ -485,8 +488,9 @@ If you have created your own bundle you will need to save it. In order to do
 this you will need to use the Juju GUI. See
 [Adding bundles with the GUI][charms-bundles-gui-exporting] for instructions.
 
-!!! Note:
-    A CLI tool for saving a bundle is currently under development.
+[note]
+A CLI tool for saving a bundle is currently under development.
+[/note]
 
 Once the bundle is saved you can consider these
 [Next steps][authors-charm-store-next-steps].

@@ -1,5 +1,3 @@
-Title: Configuring Juju for offline usage
-
 # Configuring Juju for offline usage
 
 *This page makes use of information presented in the
@@ -131,9 +129,10 @@ command. See [The Juju GUI][controllers-gui].
 
 [5]: Required if the machines will host LXD containers.
 
-!!! Note:
-    The above table does not take into account the packaging needs (e.g.
-    package updates) of the client host system.
+[note]
+The above table does not take into account the packaging needs (e.g.
+package updates) of the client host system.
+[/note]
 
 ## Offline configuration methods
 

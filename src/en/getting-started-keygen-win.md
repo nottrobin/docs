@@ -1,5 +1,3 @@
-Title: Generating ssh keys on Windows  
-
 # Creating SSH Keypairs on Windows
 
 This walkthrough will show how to create SSH keys for use with Juju on Windows.

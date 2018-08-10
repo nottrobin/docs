@@ -1,6 +1,3 @@
-Title: Juju sample commands
-
-
 # Sample command usage and output interpretation
 
 This section seeks to clarify the meaning of the output to some commands and

@@ -1,5 +1,3 @@
-Title: The Juju charm store
-
 # The Juju Charm Store
 
 Juju includes a charm store where charms and bundles can be uploaded,
@@ -14,11 +12,12 @@ not submitted by and have not been vetted by Juju Charmers.
   - [Charm development information](developer-getting-started.html)
   - [Bundle creation information](charms-bundles.html)
 
-!!! Note: 
-    In order to interact with the charm store you will need the latest
-    [charm command](tools-charm-tools.html), an
-    [Ubuntu SSO account](https://login.ubuntu.com/+login), and you must have
-    logged in to [Launchpad](https://launchpad.net/+login) at least once.
+[note]
+In order to interact with the charm store you will need the latest
+[charm command](tools-charm-tools.html), an
+[Ubuntu SSO account](https://login.ubuntu.com/+login), and you must have
+logged in to [Launchpad](https://launchpad.net/+login) at least once.
+[/note]
 
 ## Log in to the store
 

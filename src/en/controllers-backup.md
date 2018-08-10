@@ -1,12 +1,14 @@
-Title: Controller backups
-TODO:  Bug tracking: https://bugs.launchpad.net/juju/+bug/1771433
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1771426
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1771202
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1771673
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1771657
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1771674
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1771821
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1773468 (CRITICAL)
+<!--
+Todo:
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771433
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771426
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771202
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771673
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771657
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771674
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1771821
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1773468 (CRITICAL)
+-->
 
 # Controller backups
 
@@ -22,9 +24,10 @@ This page will cover the following topics:
  - Restoring from a backup
  - High availability considerations
 
-!!! Note:
-    Data backups can also be made of the Juju client. See the
-    [Juju client][client-backups] page for guidance.
+[note]
+Data backups can also be made of the Juju client. See the
+[Juju client][client-backups] page for guidance.
+[/note]
 
 ## The Juju controller
 
@@ -75,11 +78,12 @@ downloading to juju-backup-20180515-191942.tar.gz
 From the name of the archive we see that the backup was made on May 15, 2018 at
 19:19:42 UTC.
 
-!!! Warning:
-    Archive filenames do not include the associated controller name. Care
-    should therefore be taken when archiving from multiple controllers. To
-    specify a custom name use the `--filename` option. This option does not
-    affect the remote archive name.
+[note=caution]
+Archive filenames do not include the associated controller name. Care
+should therefore be taken when archiving from multiple controllers. To
+specify a custom name use the `--filename` option. This option does not
+affect the remote archive name.
+[/note]
 
 To create a backup of the 'lxd' controller while both using a custom filename
 and adding an optional note:
@@ -90,9 +94,10 @@ juju create-backup -m lxd:controller --filename juju-backup-lxd-20180515-193724.
 
 The optional note is exposed via the `show-backup` command detailed below.
 
-!!! Note:
-    A backup of a fresh (empty) environment, regardless of cloud type, is
-    approximately 56 MiB in size.
+[note]
+A backup of a fresh (empty) environment, regardless of cloud type, is
+approximately 56 MiB in size.
+[/note]
 
 ### Managing backups
 
@@ -171,10 +176,11 @@ For example:
 juju upload-backup -m lxd:controller juju-backup-20180515-193724.tar.gz
 ```
 
-!!! Note:
-    It is not possible to upload a file that is equivalent to a backup stored
-    remotely. The process will be cancelled and an error message will be
-    printed.
+[note]
+It is not possible to upload a file that is equivalent to a backup stored
+remotely. The process will be cancelled and an error message will be
+printed.
+[/note]
 
 #### `juju remove-backup`
 
@@ -198,10 +204,11 @@ juju remove-backup -m aws:controller --keep-latest
 To revert the state of an environment to a previous time the `restore-backup`
 command is used.
 
-!!! Warning:
-    The restore process does not validate that a backup archive corresponds to
-    the controller it was created from. Make sure you do not overwrite a
-    controller with the wrong backup.
+[note=caution]
+The restore process does not validate that a backup archive corresponds to
+the controller it was created from. Make sure you do not overwrite a
+controller with the wrong backup.
+[/note]
 
 This command requires the use of the `--id` option when referring to a remote
 backup:
@@ -216,10 +223,11 @@ To apply a local backup the `--file` option must be used:
 juju restore-backup -m lxd:controller --file juju-backup-lxd-20180515-193724.tar.gz
 ```
 
-!!! Note:
-    It is not possible to restore using a local backup that is equivalent to a
-    remote backup. The process will be cancelled and an error message will be
-    printed. The remote backup should just be used instead.
+[note]
+It is not possible to restore using a local backup that is equivalent to a
+remote backup. The process will be cancelled and an error message will be
+printed. The remote backup should just be used instead.
+[/note]
 
 ## High availability considerations
 
@@ -318,9 +326,10 @@ juju restore-backup -m aws-ha3-2:controller --file backup.tar.gz
 juju enable-ha -m aws-ha3-2:controller -n 3
 ```
 
-!!! Note:
-    Section [Recovering from controller failure][recovering-ha-failure] details
-    how to deal with a partially degraded cluster.
+[note]
+Section [Recovering from controller failure][recovering-ha-failure] details
+how to deal with a partially degraded cluster.
+[/note]
 
 
 <!-- LINKS -->

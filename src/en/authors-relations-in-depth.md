@@ -1,5 +1,3 @@
-Title: The lifecycle of charm relations  
-
 # The Relations lifecycle
 
 A unit's `scope` consists of the group of units that are transitively connected

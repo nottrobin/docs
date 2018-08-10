@@ -1,13 +1,11 @@
-Title: Using MAAS with Juju
-table_of_contents: True
-
 # Using MAAS with Juju
 
 [MAAS][upstream-maas] treats physical servers (or KVM guests) as a public cloud
 treats cloud instances.
 
-!!! Note:
-    The Juju 2.x series is compatible with both the 1.x and 2.x series of MAAS.
+[note]
+The Juju 2.x series is compatible with both the 1.x and 2.x series of MAAS.
+[/note]
 
 ## Adding a MAAS cloud
 
@@ -125,8 +123,9 @@ Credentials added for cloud maas-cloud.
 We've called the new credential 'maas-cloud-creds'. When prompted for
 'maas-oauth', you should paste your MAAS API key.
 
-!!! Note:
-    The API key will not be echoed back to the screen.
+[note]
+The API key will not be echoed back to the screen.
+[/note]
 
 Typically you will have a MAAS user of your own. The [MAAS API key][maas-api]
 can be found on your user preferences page in the MAAS web UI, or by using the

@@ -1,7 +1,16 @@
-Title: General configuration options
-TODO: Check accuracy of key table (https://github.com/juju/juju/blob/ec89c99e51fa83cd1a2cb5e5f24e73d5b096de20/controller/config.go#L29)
-      error: table's default value keys do not show up with controller-config (e.g. bootstrap-). See above note.
-      "dynamically set by Juju" could use some explaination
+<!--
+Todo:
+- Check accuracy of key table (https://github.com/juju/juju/blob/ec89c99e51fa83cd1a2cb5e5f24e73d5b096de20/controller/config.go#L29)
+- error: table's default value keys do not show up with controller-config (e.g. bootstrap-). See above note.
+- "dynamically set by Juju" could use some explaination
+- ReadOnlyMethods updated from https://github.com/juju/juju/blob/2.3/apiserver/observer/auditfilter.go#L130
+- Include ability to set configuration key:value pairs by file
+- Show how to use spaces 'juju-mgmt-space' and 'juju-ha-space' (wth 'juju bootstrap' and 'juju enable-ha')
+-->
+
+# General configuration options
+
+"dynamically set by Juju" could use some explaination
       ReadOnlyMethods updated from https://github.com/juju/juju/blob/2.3/apiserver/observer/auditfilter.go#L130
       Include ability to set configuration key:value pairs by file
       Show how to use spaces 'juju-mgmt-space' and 'juju-ha-space' (wth 'juju bootstrap' and 'juju enable-ha')
@@ -45,11 +54,12 @@ Exceptions to this rule are three of the keys related to audit logging:
  - audit-log-capture-args
  - audit-log-exclude-methods
  
-!!! Note:
-    The `--config` option may also be used to configure the 'default' model.
-    In addition, the `model-default` option can usually always be used in place
-    of the `--config` option. See [Configuring models][models-config] for more
-    information on how models get configured and how these two options differ.
+[note]
+The `--config` option may also be used to configure the 'default' model.
+In addition, the `model-default` option can usually always be used in place
+of the `--config` option. See [Configuring models][models-config] for more
+information on how models get configured and how these two options differ.
+[/note]
 
 ## List of controller keys
 
@@ -137,12 +147,13 @@ described above, in this way:
 juju model-config -m controller audit-log-exclude-methods=[ReadOnlyMethods,Pinger.Ping]
 ```
 
-!!! Important:
-    Only those Conversations whose methods have *all* been excluded will be
-    omitted. For instance, assuming a default filter of 'ReadOnlyMethods', if a
-    Conversation contains several read-only events and a single write event
-    then all these events will appear in the log. A Conversation is a
-    collection of API methods associated with a single top-level CLI command.
+[note=caution]
+Only those Conversations whose methods have *all* been excluded will be
+omitted. For instance, assuming a default filter of 'ReadOnlyMethods', if a
+Conversation contains several read-only events and a single write event
+then all these events will appear in the log. A Conversation is a
+collection of API methods associated with a single top-level CLI command.
+[/note]
 
 Click the triangle below to reveal a listing of API methods designated by the
 key value of 'ReadOnlyMethods'. 

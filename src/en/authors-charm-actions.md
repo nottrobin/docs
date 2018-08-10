@@ -1,5 +1,3 @@
-Title: Implementing actions in Juju charms  
-
 # Actions for the Charm author
 
 Actions are scripts, binaries, or other executables defined on a charm which may

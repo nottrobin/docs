@@ -1,8 +1,16 @@
-Title: Cross Model Relations
-TODO:  Add scenario #3: different cloud types
-       Add commands to a scenario: grant|revoke, suspend|resume, remove-offer, consume|remove-saas
-       Bug tracking: https://pad.lv/1726945
-       'Managing offers' section could use a rework
+<!--
+Todo:
+- Add scenario #3: different cloud types
+- Add commands to a scenario: grant|revoke, suspend|resume, remove-offer, consume|remove-saas
+- Bug tracking: https://pad.lv/1726945
+- 'Managing offers' section could use a rework
+- (e.g. summarize management abilities first)
+- (e.g. moving some detail to a new scenario)
+-->
+
+# Cross Model Relations
+
+'Managing offers' section could use a rework
        (e.g. summarize management abilities first)
        (e.g. moving some detail to a new scenario)
 
@@ -60,8 +68,9 @@ This page presents the **concepts** behind cross model relations as well as
 two example **scenarios** that aim to reinforce those concepts through
 practical usage.
 
-!!! Note:
-    The functionality of CMR is not exposed in the GUI at this time.
+[note]
+The functionality of CMR is not exposed in the GUI at this time.
+[/note]
 
 ## Concepts
 
@@ -200,9 +209,10 @@ rule to apply to any offer in the current model.
 
 The above command is applied to the **offering** model.
 
-!!! Important:
-    The `juju set-firewall-rule` command only affects subsequently created
-    relations, not existing ones.
+[note=caution]
+The `juju set-firewall-rule` command only affects subsequently created
+relations, not existing ones.
+[/note]
 
 <!--
 To see what ingress is currently in use by relations to an offer, use the
@@ -220,11 +230,12 @@ Service                 Whitelist subnets
 juju-application-offer  103.37.0.0/16
 ```
 
-!!! Note:
-    Beyond a certain number of firewall rules, which have been dynamically
-    created to allow access from individual relations, Juju will revert to using
-    the whitelist subnets as the access rules. The number of rules at which this
-    cutover applies is cloud specific.
+[note]
+Beyond a certain number of firewall rules, which have been dynamically
+created to allow access from individual relations, Juju will revert to using
+the whitelist subnets as the access rules. The number of rules at which this
+cutover applies is cloud specific.
+[/note]
 -->
 
 ### Suspending and resuming relations
@@ -238,8 +249,9 @@ A suspended relation is resumed by an admin on the offering side:
 
 `juju resume-relation <id1>`
 
-!!! Note:
-    Command `juju offers` provides the relation ids.
+[note]
+Command `juju offers` provides the relation ids.
+[/note]
 
 ### Removing relations
 

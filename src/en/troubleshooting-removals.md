@@ -1,5 +1,7 @@
-Title: Troubleshooting removals
-TODO:  Elaborate on "restore purposes"
+<!--
+Todo:
+- Elaborate on "restore purposes"
+-->
 
 # Troubleshooting removals
 

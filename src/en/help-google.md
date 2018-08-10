@@ -1,5 +1,3 @@
-Title: Using Google GCE with Juju
-
 # Using Google GCE with Juju
 
 Juju already has knowledge of the GCE cloud, which means adding your GCE

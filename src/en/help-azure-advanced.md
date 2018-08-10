@@ -1,5 +1,3 @@
-Title: Using Microsoft Azure with Juju - advanced
-
 # Using Microsoft Azure with Juju - advanced
 
 This page is dedicated to more advanced topics related to using Microsoft Azure
@@ -24,11 +22,12 @@ In the sections below, we will assign each of these a variable name.  When you
 enter them into the command, replace the variable name we give with the actual
 ID that corresponds to the variable.
 
-!!! Important:
-    This process requires the Azure CLI tool to be installed and used to
-    successfully log in to Azure prior to Juju configuration. See
-    [Install the CLI tool][clouds-azure-cli-install] and
-    [Log in to Azure][clouds-azure-cli-login] respectively.
+[note=caution]
+This process requires the Azure CLI tool to be installed and used to
+successfully log in to Azure prior to Juju configuration. See
+[Install the CLI tool][clouds-azure-cli-install] and
+[Log in to Azure][clouds-azure-cli-login] respectively.
+[/note]
 
 #### `subscription-id`
 
@@ -93,10 +92,11 @@ The command output will be similar to the following:
 }
 ```
 
-!!! Note:
-    For more in-depth information, see Microsoft's Azure CLI documentation on
-    [Role-Based Access Control (RBAC)][azurecli-rbac] and the
-    [above commmand's syntax][azurecli-az-ad-sp].
+[note]
+For more in-depth information, see Microsoft's Azure CLI documentation on
+[Role-Based Access Control (RBAC)][azurecli-rbac] and the
+[above commmand's syntax][azurecli-az-ad-sp].
+[/note]
     
 #### `application-id` and `tenant-id`
 
@@ -164,10 +164,11 @@ You should now continue reading the main
 [Using Microsoft Azure with Juju][clouds-azure-controller] page at the
 controller-creation step.
 
-!!! Note:
-    If you add more than one credential you will need to either specify one
-    while creating the controller (`juju bootstrap --credential`) or set a
-    default (`juju set-default-credential`) before doing so.
+[note]
+If you add more than one credential you will need to either specify one
+while creating the controller (`juju bootstrap --credential`) or set a
+default (`juju set-default-credential`) before doing so.
+[/note]
 
 
 <!-- LINKS -->

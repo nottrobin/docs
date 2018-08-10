@@ -1,5 +1,3 @@
-Title: Using resources | Developer guide
-
 # Using resources
 
 Many applications require binary resources to complete the install process.

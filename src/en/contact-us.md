@@ -1,5 +1,3 @@
-Title: Contact Us
-
 # Contact us
 
 We'd love to hear about how you're using Juju, whether it's at the smallest of

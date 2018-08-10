@@ -1,6 +1,3 @@
-Title: Language details - Contributing to Juju docs  
-
-
 # Using en-GB for en-US writers
 
 The official language of Canonical documentation is English, or en-GB to be

@@ -1,8 +1,9 @@
-Title: Cloud credentials
-TODO:  Investigate: shouldn't `model-config` have a default-credential setting?
-       Review required
-       Add to mycreds.yaml: cloudsigma, rackspace, and oracle. also openstack using access-key
-table_of_contents: True
+<!--
+Todo:
+- Investigate: shouldn't `model-config` have a default-credential setting?
+- Review required
+- Add to mycreds.yaml: cloudsigma, rackspace, and oracle. also openstack using access-key
+-->
 
 # Cloud credentials
 
@@ -27,12 +28,13 @@ Juju supports three methods for adding credentials:
    files (only supported by certain providers)
  - Reading a user-provided [YAML-formatted][yaml] file
   
-!!! Note:
-    LXD deployments are a special case. Accessed from a Juju admin user, they
-    do not require credentials. Accessed from a non-admin user, a *certificate
-    credential* is needed. See
-    [Additional LXD resources][clouds-lxd-resources-non-admin-creds] for
-    details. 
+[note]
+LXD deployments are a special case. Accessed from a Juju admin user, they
+do not require credentials. Accessed from a non-admin user, a *certificate
+credential* is needed. See
+[Additional LXD resources][clouds-lxd-resources-non-admin-creds] for
+details.
+[/note]
 
 ### Adding credentials interactively
 
@@ -79,9 +81,10 @@ Any variables detected will cause a prompt to appear. You will be asked to
 confirm the addition of their respective values as well as to provide a name to
 call the credential set.
 
-!!! Note:
-    You will need to rescan the variables if their values ever change. A scan
-    only picks up *current* values.
+[note]
+You will need to rescan the variables if their values ever change. A scan
+only picks up *current* values.
+[/note]
 
 There are three providers that use tools that support this variables method:
 
@@ -91,11 +94,12 @@ There are three providers that use tools that support this variables method:
 
 Each page provides details on using this method with its respective provider.
 
-!!! Note:
-    The `autoload-credentials` command is also used to generate a certificate
-    credential for localhost clouds. This is needed for providing access to
-    non-admin Juju users. See
-    [Additional LXD resources][clouds-lxd-resources-non-admin-creds].
+[note]
+The `autoload-credentials` command is also used to generate a certificate
+credential for localhost clouds. This is needed for providing access to
+non-admin Juju users. See
+[Additional LXD resources][clouds-lxd-resources-non-admin-creds].
+[/note]
     
 ### Adding credentials from a file
 
@@ -168,9 +172,10 @@ defined 'azure' cloud, for instance, we would do this:
 juju add-credential azure -f mycreds.yaml
 ```
 
-!!! Note:
-    All available authentication types are outlined in section
-    [Adding clouds manually][clouds-adding-clouds-manually] on the Clouds page.
+[note]
+All available authentication types are outlined in section
+[Adding clouds manually][clouds-adding-clouds-manually] on the Clouds page.
+[/note]
     
 ## Managing credentials
 
@@ -333,10 +338,11 @@ juju add-credential --replace joe
 juju update-credential google joe
 ```
 
-!!! Warning:
-    It is not possible to update the credentials if the initial credential name
-    is unknown. This restriction will be removed in an upcoming release of
-    Juju.
+[note=caution]
+It is not possible to update the credentials if the initial credential name
+is unknown. This restriction will be removed in an upcoming release of
+Juju.
+[/note]
 
 ####  Updating remote credentials using a different Juju user
 

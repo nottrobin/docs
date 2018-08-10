@@ -1,5 +1,3 @@
-Title: Deploying Charms Offline
-
 # Deploying charms offline
 
 *This page is concerned with using Juju charms offline. See the
@@ -90,8 +88,9 @@ A default series can be configured at the model level:
 juju model-config -m mymodel default-series=trusty
 ```
 
-!!! Note:
-    Charms hosted on the Charm Store always have an implied series. 
+[note]
+Charms hosted on the Charm Store always have an implied series.
+[/note]
 
 See the [Deploying applications][charms-deploying] page for a comprehensive
 treatment of the `juju deploy` command and [Configuring models][models-config]

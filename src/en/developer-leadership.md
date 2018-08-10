@@ -1,5 +1,3 @@
-Title: Implementing Leadership
-
 # Implementing leadership
 
 Leadership provides a mechanism whereby multiple units of an application can

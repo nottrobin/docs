@@ -1,5 +1,7 @@
-Title: Upgrading a charm  
-TODO:  Completely devoid of CLI examples. Kindly add
+<!--
+Todo:
+- Completely devoid of CLI examples. Kindly add
+-->
 
 # Upgrade a Charm
 

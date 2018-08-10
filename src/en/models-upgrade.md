@@ -1,5 +1,3 @@
-Title: Model upgrades
-
 # Model upgrades
 
 A model is upgraded by upgrading the version of Juju running within it, in the
@@ -10,9 +8,10 @@ on each machine spawned by Juju, including controllers. See the
 A model upgrade is performed with the `upgrade-model` command and acts on all
 machine and unit agents running on all machines in the model.
 
-!!! Note:
-    The client can also be upgraded. See the [Juju client][client-upgrades]
-    page for how to do that.
+[note]
+The client can also be upgraded. See the [Juju client][client-upgrades]
+page for how to do that.
+[/note]
 
 Several noteworthy points regarding backups:
 

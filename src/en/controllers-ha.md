@@ -1,8 +1,10 @@
-Title: Controller high availability
-TODO:  Consider adding to a troubleshooting page: recovering
-       The concept of quorum should be broached.
-       In particular, what the consequences of losing quorum are. I couldn't find any, which is odd.
-       Note: juju status output includes beta version
+<!--
+Todo:
+- Consider adding to a troubleshooting page: recovering
+- The concept of quorum should be broached.
+- In particular, what the consequences of losing quorum are. I couldn't find any, which is odd.
+- Note: juju status output includes beta version
+-->
 
 # Controller high availability
 
@@ -118,8 +120,9 @@ There is now only a single active controller (and one standby) in this cluster
 (i.e. one out of two are active). Note that this situation should be rectified
 as soon as possible.
 
-!!! Note:
-    The `enable-ha` command cannot be used to remove machines from the cluster.
+[note]
+The `enable-ha` command cannot be used to remove machines from the cluster.
+[/note]
 
 ## Adding machines to the cluster
 
@@ -197,10 +200,11 @@ straightforward:
  1. Remove bad controllers (as described [above][#removing-controllers]).
  1. Add new controllers (as described [above][#adding-controllers]).
 
-!!! Important:
-    Controllers must be removed prior to the addition of new ones because the
-    `enable-ha` command does not check for failure. It simply ensures the
-    total number of members are present.
+[note=caution]
+Controllers must be removed prior to the addition of new ones because the
+`enable-ha` command does not check for failure. It simply ensures the
+total number of members are present.
+[/note]
 
 You must restore from backups in the unfortunate case where there are an
 insufficient number of working controllers present. See

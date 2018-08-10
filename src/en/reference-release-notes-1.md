@@ -1,5 +1,3 @@
-Title: Juju Release Notes
-
 # Release Notes History for 1.x series
 
 This section details all the available release notes for the

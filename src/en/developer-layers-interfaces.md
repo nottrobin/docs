@@ -1,5 +1,3 @@
-Title: Interface layers
-
 # Interface layers
 
 Interface layers are responsible for the communication that transpires over a
@@ -135,11 +133,12 @@ export INTERFACE_PATH=$JUJU_REPOSITORY/interfaces
 mkdir -p $LAYER_PATH $INTERFACE_PATH
 ```
 
-!!! Note:
-    Exporting the environment variables in this way only sets the
-    variables for the current terminal. If you wish to make these changes persist,
-    add the same export statements to a resource file that are evaluated when you
-    create a new console such as `~/.bashrc` depending on your shell.
+[note]
+Exporting the environment variables in this way only sets the
+variables for the current terminal. If you wish to make these changes persist,
+add the same export statements to a resource file that are evaluated when you
+create a new console such as `~/.bashrc` depending on your shell.
+[/note]
 
 The export of `INTERFACE_PATH` is an environment variable which tells the
 `charm build` process where to scan for local interfaces not found in the
@@ -194,15 +193,19 @@ class HttpProvides(Endpoint):
             relation.to_publish['port'] = port
 ```
 
-!!! Note: Data is send after the hook successfully exits. If any handler
-    crashes, all the flags and the `to_send` dict will be reset to their
-    original position at hook start.
+[note]
+Data is send after the hook successfully exits. If any handler
+crashes, all the flags and the `to_send` dict will be reset to their
+original position at hook start.
+[/note]
 
-!!! Note: You can only publish data at the relation level. All units of the
-    application at the other end of the relation will see the same data. If you
-    need to provide data specific to each remote unit, you can use a workaround
-    such as publishing a dictionary with the remote unit names as keys and
-    their specific data as values.
+[note]
+You can only publish data at the relation level. All units of the
+application at the other end of the relation will see the same data. If you
+need to provide data specific to each remote unit, you can use a workaround
+such as publishing a dictionary with the remote unit names as keys and
+their specific data as values.
+[/note]
 
 Now we can use this `provides` endpoint interface in our charm. The first step
 is to define the relation using this interface in `metadata.yaml`.
@@ -305,7 +308,9 @@ class HttpRequires(Endpoint):
         return websites
 ```
 
-!!! Note: Although this is obviously a very simple example, it is important for
+[note]
+Although this is obviously a very simple example, it is important for
+[/note]
 your interface layer to provide an API like this and not give the charms direct
 access to the `Relation` and `RelatedUnit` objects in those collections. This
 ensures proper encapsulation of the underlying interface data protocol; it

@@ -1,5 +1,3 @@
-Title: Troubleshooting clouds
-
 # Troubleshooting clouds
 
 ## Common issues setting up clouds

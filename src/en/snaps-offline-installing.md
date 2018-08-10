@@ -1,5 +1,3 @@
-Title: Installing snaps offline
-
 # Installing snaps offline
 
 *This is in connection with the [Working offline][charms-offline] page. See

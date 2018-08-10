@@ -1,5 +1,3 @@
-Title: What's new in 2.4
-
 # What's new in 2.4
 
 The latest release of Juju has focused a little more on under-the-hood 

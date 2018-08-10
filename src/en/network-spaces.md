@@ -1,5 +1,7 @@
-Title: Network Spaces
-TODO:  Bug tracking: https://bugs.launchpad.net/juju/+bug/1747998
+<!--
+Todo:
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1747998
+-->
 
 # Network Spaces
 
@@ -17,8 +19,9 @@ Here are a few properties to keep in mind:
 - Any given subnet can be part of one and only one space.
 - All subnets within a space are considered "equal" in terms of routing.
 
-!!! Note:
-    Network spaces are currently only supported by the MAAS and EC2 providers.
+[note]
+Network spaces are currently only supported by the MAAS and EC2 providers.
+[/note]
 
 ## Use case
 
@@ -38,10 +41,11 @@ backend MySQL for Joomla is running in the "db" space. All subnets within the
 "cms" and "db" spaces provide no access from outside the environment for
 security reasons.
 
-!!! Note: 
-    Future development will implement isolation among spaces via firewall
-    and/or access control rules. This measns that only network traffic required
-    for the applications to function will be allowed between spaces.
+[note]
+Future development will implement isolation among spaces via firewall
+and/or access control rules. This measns that only network traffic required
+for the applications to function will be allowed between spaces.
+[/note]
 
 ## Adding and listing spaces and subnets
 
@@ -100,9 +104,10 @@ to "pull" such information from MAAS. This is done by default upon
 controller-creation. Run `juju reload-spaces` to refresh Juju's knowledge of
 MAAS spaces and works on a per-model basis. 
 
-!!! Note:
-    The `reload-spaces` command does not currently pull in all information.
-    This is being worked upon. See [LP #1747998][LP-1747998].
+[note]
+The `reload-spaces` command does not currently pull in all information.
+This is being worked upon. See [LP #1747998][LP-1747998].
+[/note]
 
 ### Bridges
 

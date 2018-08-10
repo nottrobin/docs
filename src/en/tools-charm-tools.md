@@ -1,5 +1,3 @@
-Title: Charm tools
-
 # Charm Tools
 
 The Charm Tools package is a collection of commands that assist with charm

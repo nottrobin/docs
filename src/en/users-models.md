@@ -1,7 +1,9 @@
-Title: Juju users and models
-TODO: Stuff on user-added models (ssh key and credentials)
-      Check the functionality of admin user access level. This currently
-      appears to do nothing (not destroy models, nor backups) 
+<!--
+Todo:
+- Stuff on user-added models (ssh key and credentials)
+- Check the functionality of admin user access level. This currently
+- appears to do nothing (not destroy models, nor backups)
+-->
 
 # Users and models
 
@@ -61,13 +63,14 @@ juju grant jim write mymodel
 ```
 See [Users][regularusers] for details on available commands.
 
-!!! Note: 
-    Each user has control over naming the models they own. This means it is
-    possible for two users, `jane` and `claire`, to each have a model with the same
-    name, `foo`. This could cause difficulty when `claire` needs to access `jane`'s
-    model. Because of this, it is possible to refer to models using
-    `{owner}/{model}` in place of just the model name. For example, `claire` can
-    get the status of the model using `juju status -m jane/foo`.
+[note]
+Each user has control over naming the models they own. This means it is
+possible for two users, `jane` and `claire`, to each have a model with the same
+name, `foo`. This could cause difficulty when `claire` needs to access `jane`'s
+model. Because of this, it is possible to refer to models using
+`{owner}/{model}` in place of just the model name. For example, `claire` can
+get the status of the model using `juju status -m jane/foo`.
+[/note]
 
 ## Controller access
 
@@ -139,9 +142,10 @@ On the controller, you grant Frances access to add models using:
 juju grant frances@external addmodel
 ```
 
-!!! Note: 
-    The '@external' is required as it indicates where the credential
-    comes from, as opposed to '@local'.
+[note]
+The '@external' is required as it indicates where the credential
+comes from, as opposed to '@local'.
+[/note]
 
 You can allow anyone with an Ubuntu SSO account to create models on this
 controller like this:
@@ -206,12 +210,13 @@ both read and write access:
 juju revoke bob read mymodel
 ```
 
-!!! Note:
-    The admin user has credentials stored in the controller and will be able to
-    perform functions on any model. However, a regular user who has been given
-    'add-model' permissions may need to specify which credential to use when
-    logging in to a model for the first time. To specify a credential, run 'juju
-    add-credential'.
+[note]
+The admin user has credentials stored in the controller and will be able to
+perform functions on any model. However, a regular user who has been given
+'add-model' permissions may need to specify which credential to use when
+logging in to a model for the first time. To specify a credential, run 'juju
+add-credential'.
+[/note]
 
 
 [addmodel]: ./models-adding.html

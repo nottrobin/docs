@@ -1,5 +1,3 @@
-Title: Charms
-
 # Charms
 
 A Juju *charm* contains all the instructions necessary for deploying and

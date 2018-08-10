@@ -1,6 +1,8 @@
-Title: Deploying applications - advanced
-TODO:  Verify MAAS spaces example
-       Reconcile 'add-unit' with charms-scaling.md
+<!--
+Todo:
+- Verify MAAS spaces example
+- Reconcile 'add-unit' with charms-scaling.md
+-->
 
 # Deploying applications - advanced
 
@@ -79,10 +81,11 @@ To deploy to specific, pre-existing machines the `--to` option is used. When
 this is done, unless the machine was created via `add-machine`, a charm has
 already been deployed to the machine.  
 
-!!! Note:
-    When multiple charms are deployed to the same machine there exists the
-    possibility of conflicting configuration files (on the machine's
-    filesystem). Work is being done to rectify this.
+[note]
+When multiple charms are deployed to the same machine there exists the
+possibility of conflicting configuration files (on the machine's
+filesystem). Work is being done to rectify this.
+[/note]
 
 Machines are often referred to by their ID number. This is a simple integer
 that is shown in the output to `juju status` (or `juju machines`). For example,

@@ -1,6 +1,3 @@
-Title: Notes on upgrading Juju software  
-
-
 # Notes on upgrading models
 
 This is an addendum to the main page describing Juju software upgrades:
@@ -81,9 +78,10 @@ state server:
 juju sync-agent-binaries --version 2.03 --debug
 ```
 
-!!! Note: 
-    The `sync-agent-binaries --version` command only accepts `major[.minor]`
-    ("e.g. use '2.03' not '2.03.1').
+[note]
+The `sync-agent-binaries --version` command only accepts `major[.minor]`
+("e.g. use '2.03' not '2.03.1').
+[/note]
 
 For complete syntax, see the
 [command reference page](./commands.html#sync-agent-binaries) or by running

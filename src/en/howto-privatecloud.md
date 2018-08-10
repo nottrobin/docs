@@ -1,6 +1,8 @@
-Title: Cloud image metadata
-TODO:  Critical: review required
-       Consider renaming this file (e.g. cloud-image-metadata)
+<!--
+Todo:
+- Critical: review required
+- Consider renaming this file (e.g. cloud-image-metadata)
+-->
 
 # Cloud image metadata
 
@@ -86,12 +88,13 @@ e9df831d-9632-4e06-bd21-d047e4c5ef4e xenial active
 Take a note of the image IDs for the images you want added to Simplestreams.
 These will be used in the next step.
 
-!!! Note: 
-    If you have images for multiple different series of Ubuntu, make sure
-    you keep track of which series name matches which image ID.  The value
-    $IMAGE_ID, used below, will apply to the image ID of the image for the
-    particular series you are specifying and $OS_SERIES will be the series name
-    ("trusty", "xenial", etc.).
+[note]
+If you have images for multiple different series of Ubuntu, make sure
+you keep track of which series name matches which image ID.  The value
+$IMAGE_ID, used below, will apply to the image ID of the image for the
+particular series you are specifying and $OS_SERIES will be the series name
+("trusty", "xenial", etc.).
+[/note]
 
 We can now use Juju to generate the metadata:
 
@@ -106,11 +109,12 @@ Replace these values with your own in the above command:
   - **$REGION** - The region name of the cloud.
   - **$KEYSTONE_IP** - The address of the cloud's keystone server.
 
-!!! Note:
-    You can also specify, via the `--stream` option, an image stream (see
-    [Image streams][image-streams]) that is not 'released' (i.e.
-    'daily'). However, doing so will require you to specify this stream
-    explicitly when using this metadata to create any subsequent controllers.
+[note]
+You can also specify, via the `--stream` option, an image stream (see
+[Image streams][image-streams]) that is not 'released' (i.e.
+'daily'). However, doing so will require you to specify this stream
+explicitly when using this metadata to create any subsequent controllers.
+[/note]
 
 If you have images for multiple series of Ubuntu, run this command again for
 each series substituting **$OS_SERIES** with the series name and **$IMAGE_ID** with
@@ -130,9 +134,11 @@ Stop here and return to the [bootstrap instructions][bootstrap].
 
 ## Upload the image metadata to an object store
 
-!!! Note: Only those with admin privileges or who are operators in the OpenStack 
-    environment will be able to create a service and view endpoints used by the following 
-    instructions.
+[note]
+Only those with admin privileges or who are operators in the OpenStack 
+environment will be able to create a service and view endpoints used by the following 
+instructions.
+[/note]
 
 These instructions use Swift, however other object stores may be used as well.
 
@@ -263,9 +269,10 @@ There are two URLs for the Object Store is listed.  We will refer to the
 `publicurl` field above as **$SWIFT_PUBLIC_URL** in the following commands
 and the `internalurl` field as **$SWIFT_INTERNAL_URL**.
 
-!!! Note: 
-    You can verify the url before bootstrap with
-    `wget $SWIFT_PUBLIC_URL/simplestreams/images/streams/v1/index.json`
+[note]
+You can verify the url before bootstrap with
+`wget $SWIFT_PUBLIC_URL/simplestreams/images/streams/v1/index.json`
+[/note]
 
 Enter the following command to register the endpoint with the Simplestreams
 service, when using Identity v3:
@@ -283,9 +290,10 @@ openstack endpoint create --region $REGION \
    --internalurl $SWIFT_INTERNAL_URL/simplestreams/images product-streams
 ```
 
-!!! Note: 
-    Juju will automatically look for a product-streams service during
-    bootstrap to use for image streams.
+[note]
+Juju will automatically look for a product-streams service during
+bootstrap to use for image streams.
+[/note]
 
 ## Using the Glance Simplestreams Sync charm to configure image streams.
 
@@ -296,9 +304,10 @@ provide customizeable syncing for automatic image updates.
 
  - OpenStack deployment by Juju
 
-!!! Note: 
-    You must have permissions to deploy charms in the Juju model running
-    OpenStack to utilize this method for image metatdata management.
+[note]
+You must have permissions to deploy charms in the Juju model running
+OpenStack to utilize this method for image metatdata management.
+[/note]
 
 
 ### Deploying the Glance simplestreams charm to your OpenStack Cloud
@@ -309,15 +318,17 @@ It is recommended to set the charm's configuration variable use_swift to true
 as Juju will automatically look for a product-streams service during bootstrap
 to use for image streams.
 
-!!! Note: 
-    As of 6 June 2017, keystone v3 is not supported with this charm.
-    Check [bug 1611987][lp1611987] for resolution.
+[note]
+As of 6 June 2017, keystone v3 is not supported with this charm.
+Check [bug 1611987][lp1611987] for resolution.
+[/note]
 
 
-!!! Note:
-    An image stream will need to be explicitly stated, via the 'image-stream'
-    model config option, if a non-default image stream was chosen during the
-    metadata-creation step above.
+[note]
+An image stream will need to be explicitly stated, via the 'image-stream'
+model config option, if a non-default image stream was chosen during the
+metadata-creation step above.
+[/note]
 
 See [Creating a controller][controllers-creating] for details on creating a
 controller.

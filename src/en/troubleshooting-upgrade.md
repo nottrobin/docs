@@ -1,5 +1,3 @@
-Title: Troubleshooting model upgrades
-
 # Troubleshooting model upgrades
 
 This section provides strategies and techniques to assist with broken model

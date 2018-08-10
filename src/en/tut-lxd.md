@@ -1,7 +1,9 @@
-Title: Getting started with Juju and LXD
-TODO:  Warning: Ubuntu release versions hardcoded
-       Remove 10 uneeded image files in master (juju-lxd-config*.png)
-       Remove 1 uneeded image file in master (tut-lxd-wiki-simple-status.png)
+<!--
+Todo:
+- Warning: Ubuntu release versions hardcoded
+- Remove 10 uneeded image files in master (juju-lxd-config*.png)
+- Remove 1 uneeded image file in master (tut-lxd-wiki-simple-status.png)
+-->
 
 # Getting started with Juju and LXD
 
@@ -35,9 +37,10 @@ sudo snap install juju --classic
 sudo apt install -t xenial-backports lxd 
 ```
 
-!!! Note:
-    Installing LXD in this way will update LXD if it is already present on your
-    system.
+[note]
+Installing LXD in this way will update LXD if it is already present on your
+system.
+[/note]
 
 **ZFS** is installed like so:
 
@@ -117,12 +120,13 @@ Our example gives:
 
 So the subnet address is **10.145.230.0/24**.
 
-!!! Note:
-    LXD adds iptables (firewall) rules to allow traffic to the subnet/bridge it
-    created. If you subsequently add/change firewall settings (e.g. with
-    `ufw`), ensure that such changes have not interfered with Juju's ability to
-    communicate with LXD. Juju requires inbound traffic for TCP port 8443 from
-    the LXD subnet.
+[note]
+LXD adds iptables (firewall) rules to allow traffic to the subnet/bridge it
+created. If you subsequently add/change firewall settings (e.g. with
+`ufw`), ensure that such changes have not interfered with Juju's ability to
+communicate with LXD. Juju requires inbound traffic for TCP port 8443 from
+the LXD subnet.
+[/note]
 
 ## Create a controller
 
@@ -236,10 +240,11 @@ From the above output, we can see that the IP address for the MediaWiki site is
 
 Congratulations, you have just deployed an application with Juju!
 
-!!! Note:
-    The easiest way to remove all the applications in a model and start afresh
-    is to destroy the model (`juju destroy-model`) and then create a new one
-    (`juju add-model`).
+[note]
+The easiest way to remove all the applications in a model and start afresh
+is to destroy the model (`juju destroy-model`) and then create a new one
+(`juju add-model`).
+[/note]
 
 ## Next Steps
 

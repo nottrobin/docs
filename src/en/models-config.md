@@ -1,7 +1,15 @@
-Title: General configuration options
-TODO: Check accuracy of key table
-      Confirm 'all' harvest mode state. Seems it should be "'Dead' or
-	'Unknown'" OR "a combination of modes 'destroyed' and 'unknown'".
+<!--
+Todo:
+- Check accuracy of key table
+- Confirm 'all' harvest mode state. Seems it should be "'Dead' or
+- 'Unknown'" OR "a combination of modes 'destroyed' and 'unknown'".
+- Provide an example yaml file in a model-config or model-defaults context
+- Re yaml files, which takes precedence? CLI-specified or file?
+-->
+
+# General configuration options
+
+'Unknown'" OR "a combination of modes 'destroyed' and 'unknown'".
       Provide an example yaml file in a model-config or model-defaults context
       Re yaml files, which takes precedence? CLI-specified or file?
 
@@ -37,9 +45,10 @@ It is also possible to specify a list of key-value pairs:
 juju model-config test-mode=true enable-os-upgrade=false
 ```
 
-!!! Note: 
-    Juju does not currently check that the provided key is a valid setting, so
-    make sure you spell it correctly.
+[note]
+Juju does not currently check that the provided key is a valid setting, so
+make sure you spell it correctly.
+[/note]
 
 To set a null value:
   
@@ -274,9 +283,10 @@ distracting and unwelcome. For this reason, it is possible to set the
 this case, users will have to manually retry any hook which fails, using the
 command above, as with earlier versions of Juju.
 
-!!! Note:
-    Even with the automatic retry enabled, it is still possible to use the
-    `juju resolved unit-name/#` command to retry manually.
+[note]
+Even with the automatic retry enabled, it is still possible to use the
+`juju resolved unit-name/#` command to retry manually.
+[/note]
 
 ### Image streams
 
@@ -341,8 +351,9 @@ The parameters are:
  - apt-sources
  - ca-certs
 
-!!! Note:
-    The 'apt-security' parameter is not available for the 'trusty' series.
+[note]
+The 'apt-security' parameter is not available for the 'trusty' series.
+[/note]
 
 For instance:
 

@@ -1,5 +1,3 @@
-Title: Application configuration  
-
 # Application configuration
 
 ## Introduction

@@ -1,5 +1,3 @@
-Title: Juju actions
-
 # Juju Actions
 
 Juju charms can describe *actions* that users can take on deployed applications.
@@ -69,11 +67,12 @@ add-repo:
 ...
 ```
 
-!!! Note: 
-    the full schema is under the `properties` key of the root Action.  Juju
-    Actions rely on [JSON-Schema][jsonschema] for validation.  The
-    top-level keys shown for the Action (`description` and `properties`) may
-    include future additions to the feature.
+[note]
+the full schema is under the `properties` key of the root Action.  Juju
+Actions rely on [JSON-Schema][jsonschema] for validation.  The
+top-level keys shown for the Action (`description` and `properties`) may
+include future additions to the feature.
+[/note]
 
 ### `juju run-action`
 

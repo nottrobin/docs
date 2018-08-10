@@ -1,8 +1,14 @@
-Title: Using LXD with Juju
-TODO:  Warning: Ubuntu release versions hardcoded
-       2.5 release will demand significant reword: LXD can be used remotely
-       Warning: Troubleshoot Trusty; bootstrap only works with the lxd snap
-       (and only if it is installed w/o the lxd deb being installed first)
+<!--
+Todo:
+- Warning: Ubuntu release versions hardcoded
+- 2.5 release will demand significant reword: LXD can be used remotely
+- Warning: Troubleshoot Trusty; bootstrap only works with the lxd snap
+- (and only if it is installed w/o the lxd deb being installed first)
+-->
+
+# Using LXD with Juju
+
+(and only if it is installed w/o the lxd deb being installed first)
 table_of_contents: True
 
 # Using LXD with Juju
@@ -13,9 +19,10 @@ containers acting as Juju machines, even a moderately powerful laptop can
 create useful models, or serve as a platform to develop your own charms. Make
 sure you have enough local space for the containers though.
 
-!!! Note:
-    Work is currently underway that will allow Juju to connect to remote LXD
-    hosts.
+[note]
+Work is currently underway that will allow Juju to connect to remote LXD
+hosts.
+[/note]
 
 Constraints can be used with LXD containers (`v.2.4.1`). However, these are not
 bound to the LXD cloud type (i.e. they can affect containers that are
@@ -45,9 +52,10 @@ recent (and supported) version is used:
 sudo apt install -t trusty-backports lxd
 ```
 
-!!! Note:
-    It's been reported that the snap install works significantly better on
-    Trusty than what's available in the Ubuntu archive.
+[note]
+It's been reported that the snap install works significantly better on
+Trusty than what's available in the Ubuntu archive.
+[/note]
 
 ### Ubuntu 16.04 LTS
 
@@ -58,9 +66,10 @@ recent (and supported) version is used:
 sudo apt install -t xenial-backports lxd 
 ```
 
-!!! Note:
-    Installing LXD in this way will update LXD if it is already present on your
-    system.
+[note]
+Installing LXD in this way will update LXD if it is already present on your
+system.
+[/note]
 
 ### Ubuntu 16.10 and greater
 
@@ -99,8 +108,9 @@ groups
 LXD can use various file-systems for its containers. Below we show how to
 implement ZFS, as it provides the best experience.
 
-!!! Note:
-    ZFS is not supported on Ubuntu 14.04 LTS.
+[note]
+ZFS is not supported on Ubuntu 14.04 LTS.
+[/note]
     
 Proceed as follows:
 

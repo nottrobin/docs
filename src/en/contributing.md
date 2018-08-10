@@ -1,5 +1,3 @@
-Title: Contributing to Juju docs  
-
 # Contributing to Juju documentation
 
 Juju documentation is hosted on [GitHub](http://github.com) and published on
@@ -107,10 +105,11 @@ the docs:
 To implement this callout, use the following syntax:
 
 ```no-highlight
-!!! Note: 
-    If you want to get more information on what is actually happening, or
-    to help resolve problems, you can add the `--show-log` switch to the juju
-    command to get verbose output.
+[note]
+If you want to get more information on what is actually happening, or
+to help resolve problems, you can add the `--show-log` switch to the juju
+command to get verbose output.
+[/note]
 ```
 
 
@@ -157,9 +156,10 @@ first get the dependencies and make the docs:
     make sysdeps
     make
 
-!!! Note: 
-    You only need to `make sysdeps` once, after that you'll have all the
-    dependencies you'll need to build the docs going forward.
+[note]
+You only need to `make sysdeps` once, after that you'll have all the
+dependencies you'll need to build the docs going forward.
+[/note]
 
 The documentation makes use of Javascript for some functionality, so in order
 to test the docs properly you will need to have a web server set up. See

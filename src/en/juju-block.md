@@ -1,5 +1,3 @@
-Title: Restricting changes to the running Juju environment
-
 # Restricting changes to running models
 
 Deployed models can be protected from unintentional changes by disabling
@@ -68,9 +66,10 @@ This will output will list any group that's currently disabled:
 Disabled commands  Message
 all
 ```
-!!! Warning: 
-    In some cases, the disable command will only take effect after the
-    user has logged out of Juju and logged back in again.
+[note=caution]
+In some cases, the disable command will only take effect after the
+user has logged out of Juju and logged back in again.
+[/note]
 
 ## Commands within each enable and disable group
 
@@ -105,9 +104,10 @@ all
 |                    |                    | upgrade-charm        |
 |                    |                    | upgrade-model        |
 
-!!! Note: 
-    The '--force' option recognized by some Juju commands bypasses any
-    restriction level that would otherwise apply. If your policy is to use
-    restrictions then the immediate use of the '--force' option should not be part
-    of your workflow. If you must use it, do so after having first run the Juju
-    command without it to ensure you are aware of any possible restrictions.
+[note]
+The '--force' option recognized by some Juju commands bypasses any
+restriction level that would otherwise apply. If your policy is to use
+restrictions then the immediate use of the '--force' option should not be part
+of your workflow. If you must use it, do so after having first run the Juju
+command without it to ensure you are aware of any possible restrictions.
+[/note]

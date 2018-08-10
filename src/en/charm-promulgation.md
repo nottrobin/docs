@@ -1,5 +1,3 @@
-Title: Charm promulgation
-
 # Charm promulgation
 
 To promulgate a Juju charm a member of the

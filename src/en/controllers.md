@@ -1,9 +1,10 @@
-Title: Controllers
-TODO:  Figure out the 'block command' situation (including CLI help
-         text). See 'Restricting command usage' section. The old page lives on.
-       Need examples for each command.
-       Review required
-
+<!--
+Todo:
+- Figure out the 'block command' situation (including CLI help
+- text). See 'Restricting command usage' section. The old page lives on.
+- Need examples for each command.
+- Review required
+-->
 
 # Controllers
 

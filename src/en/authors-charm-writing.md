@@ -1,6 +1,3 @@
-Title: Writing your first Juju charm
-
-
 # Your first charm starts here!
 
 Okay, so you have read up all the background info on what a charm is, how it

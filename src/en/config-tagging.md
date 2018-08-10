@@ -1,5 +1,3 @@
-Title: Instance naming and tagging in clouds  
-
 # Instance naming and tagging
 Juju now tags instances and volumes created in supported clouds with the 
 Juju environment UUID, and related Juju entities. Instances will be tagged with

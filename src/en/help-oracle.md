@@ -1,5 +1,7 @@
-Title: Using Oracle Compute with Juju
-TODO:  Review required
+<!--
+Todo:
+- Review required
+-->
 
 # Using Oracle Compute with Juju
 
@@ -45,9 +47,10 @@ Proceed as follows:
 
 ![Create Compute service](./media/oracle_empty-dashboard-2.png)
 
-!!! Note:
-    We are doing this to associate images with your 'identity domain'. We will
-    not be creating an instance here.
+[note]
+We are doing this to associate images with your 'identity domain'. We will
+not be creating an instance here.
+[/note]
 
 Click on 'Marketplace' on the resulting page (left menu), enter 'ubuntu' into
 the search field, and hit Enter:
@@ -64,16 +67,18 @@ Juju-compatible images are listed below:
 | Ubuntu 16.04 LTS | amd64  | Xenial  |
 | Ubuntu 17.04     | amd64  | Zesty   |
 
-!!! Warning:
-    In particular, Ubuntu 16.10 (Yakkety) should not be used with Juju.
+[note=caution]
+In particular, Ubuntu 16.10 (Yakkety) should not be used with Juju.
+[/note]
 
 Since Juju uses charms to install applications, the Ubuntu series you need are
 those that the charms were written for. If unsure, it is recommended to add the
 two most recent LTS releases.
 
-!!! Note:
-    At time of writing, Trusty and Xenial are the two most recent Ubuntu
-    LTS releases.
+[note]
+At time of writing, Trusty and Xenial are the two most recent Ubuntu
+LTS releases.
+[/note]
 
 Select a compatible image from among the official Ubuntu images (orange Ubuntu
 logo), accept Oracle's terms and conditions, and click 'Install'. Repeat the
@@ -175,8 +180,9 @@ Credentials added for cloud oracle-cloud.
 We've called the new credential 'oracle-cloud-creds' and entered values for
 'Username', 'Password', and 'Identity domain'.
 
-!!! Note:
-    The password will not be echoed back to the screen.
+[note]
+The password will not be echoed back to the screen.
+[/note]
 
 
 ## Juju networks and spaces

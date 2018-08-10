@@ -1,5 +1,3 @@
-Title: Amulet  
-
 # Amulet, a Juju test library
 
 Amulet is a Python library for deploying, manipulating, and testing Juju

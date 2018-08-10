@@ -1,5 +1,3 @@
-Title: Writing charms using terms
-
 # Writing charms that use terms
 
 Many applications require the acceptance of terms in order to be installed.

@@ -1,6 +1,3 @@
-Title: Creating Juju users
-
-
 # Creating users
 
 A regular user is added to a controller by the controller administrator. This
@@ -13,9 +10,10 @@ for themselves. The controller name needs to be unique within the context of
 the local (operating system) user account. The user's password is stored on the
 controller.
 
-!!! Note: 
-    A "client system" is a computer, such as an Ubuntu system, that is on
-    the network and has Juju installed.
+[note]
+A "client system" is a computer, such as an Ubuntu system, that is on
+the network and has Juju installed.
+[/note]
 
 At this stage, the user is registered to a controller and is allowed to perform
 the following additional actions (in the context of the controller):
@@ -28,13 +26,14 @@ the following additional actions (in the context of the controller):
 To do anything further the user must wait to be granted access to a model by
 the administrator. See [Users and models](./users-models.html).
 
-!!! Note: 
-    User registration (and any other Juju operations that involves
-    communication between a client system and a controller) necessitates the client
-    be able to contact the controller over the network on TCP port 17070. In
-    particular, if using the LXD provider, network routes need to be in place (i.e.
-    to contact the LXD controller container the client traffic must be routed
-    through the LXD host).
+[note]
+User registration (and any other Juju operations that involves
+communication between a client system and a controller) necessitates the client
+be able to contact the controller over the network on TCP port 17070. In
+particular, if using the LXD provider, network routes need to be in place (i.e.
+to contact the LXD controller container the client traffic must be routed
+through the LXD host).
+[/note]
 
 
 ## User creation and registration

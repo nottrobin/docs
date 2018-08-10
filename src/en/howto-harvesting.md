@@ -1,5 +1,3 @@
-Title: Juju and machine utilization  
-
 # Juju and Utilized Machines
 
 Juju can manage the entire life cycle of an application. When deploying a

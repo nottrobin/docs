@@ -1,6 +1,8 @@
-Title: Removing Juju objects
-TODO:  remove-application|unit should mention in what circumstances the associated machine is removed (other units or containers will prevent this)
-       remove-machine should mention in what circumstances the machine is not removed (other units or containers will prevent this)
+<!--
+Todo:
+- remove-application|unit should mention in what circumstances the associated machine is removed (other units or containers will prevent this)
+- remove-machine should mention in what circumstances the machine is not removed (other units or containers will prevent this)
+-->
 
 # Removing Juju objects
 
@@ -31,12 +33,13 @@ left alive in the model. However, the `--destroy-storage` option can be used to
 instruct Juju to destroy the storage once detached. See
 [Using Juju Storage][charms-storage] for details on dynamic storage.
 
-!!! Note: 
-    Removing an application which has active relations with another running
-    application will terminate that relation. Charms are written to handle
-    this, but be aware that the other application may no longer work as
-    expected. To remove relations between deployed applications, see the
-    section below.
+[note]
+Removing an application which has active relations with another running
+application will terminate that relation. Charms are written to handle
+this, but be aware that the other application may no longer work as
+expected. To remove relations between deployed applications, see the
+section below.
+[/note]
 
 ## Removing units
 

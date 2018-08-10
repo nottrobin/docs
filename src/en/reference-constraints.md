@@ -1,7 +1,9 @@
-Title: Juju constraints
-TODO:  Add constraints info for Oracle and Rackspace
-       Confirm/explain: different clouds also dictate constraints that would conflict with other clouds and cannot be used in combination.
-       Rethink: Cloud difference section (include examples of things that work?)
+<!--
+Todo:
+- Add constraints info for Oracle and Rackspace
+- Confirm/explain: different clouds also dictate constraints that would conflict with other clouds and cannot be used in combination.
+- Rethink: Cloud difference section (include examples of things that work?)
+-->
 
 # Juju constraints
 

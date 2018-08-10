@@ -1,6 +1,7 @@
-Title: Users and authentication
-TODO:  Stuff on user-created models (ssh key and credentials)
-
+<!--
+Todo:
+- Stuff on user-created models (ssh key and credentials)
+-->
 
 # Users and authentication
 

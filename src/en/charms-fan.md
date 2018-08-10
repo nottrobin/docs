@@ -1,7 +1,9 @@
-Title: Juju and Fan networking
-TODO:  bug tracking: https://bugs.launchpad.net/juju/+bug/1733354 (remove constraints Note if no longer required)
-       hardcoded: default AWS instance type of 'm3.medium'
-       consider a third example: manually configure the Fan with Azure
+<!--
+Todo:
+- bug tracking: https://bugs.launchpad.net/juju/+bug/1733354 (remove constraints Note if no longer required)
+- hardcoded: default AWS instance type of 'm3.medium'
+- consider a third example: manually configure the Fan with Azure
+-->
 
 # Juju and Fan networking
 
@@ -147,11 +149,12 @@ To use Fan networking with AWS a *virtual private cloud* (VPC) is required.
 Fortunately, a working VPC is provided with every AWS account and is used, by
 default, when creating regular EC2 instances.  
 
-!!! Note:
-    You may need to create a new VPC if you are using an old AWS account (the
-    original VPC may be deficient). Some may simply prefer to have a
-    Juju-dedicated VPC. See [Creating an AWS VPC][fan-aws-vpc] for
-    instructions.
+[note]
+You may need to create a new VPC if you are using an old AWS account (the
+original VPC may be deficient). Some may simply prefer to have a
+Juju-dedicated VPC. See [Creating an AWS VPC][fan-aws-vpc] for
+instructions.
+[/note]
 
 Whether you created a secondary VPC out of necessity or preference you will
 need to inform Juju about it. See
@@ -168,10 +171,11 @@ juju deploy wordpress --to lxd:1
 juju add-relation mysql wordpress
 ```
 
-!!! Note:
-    A VPC may fail to provide the default AWS instance type of 'm3.medium'. See
-    [AWS specific features][anchor__aws-specific-features] for how to request
-    an alternative.
+[note]
+A VPC may fail to provide the default AWS instance type of 'm3.medium'. See
+[AWS specific features][anchor__aws-specific-features] for how to request
+an alternative.
+[/note]
 
 A partial output to `juju status` is:
 

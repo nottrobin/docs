@@ -1,5 +1,3 @@
-Title: Installing Ceph
-
 # Installing Ceph
 
 Here we present one way to install a rudimentary Ceph cluster with Juju backed

@@ -1,5 +1,3 @@
-Title: Benchmarking Juju applications  
-
 # Overview
 
 Note: [Juju Actions](authors-charm-actions.html) are required for Juju

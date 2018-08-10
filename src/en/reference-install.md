@@ -1,5 +1,3 @@
-Title: Installing Juju
-
 # Installing Juju
 
 Stable versions of Juju are available on Ubuntu, various other Linux
@@ -25,9 +23,10 @@ using Ubuntu 14.04 LTS you will need to install it prior to installing Juju:
 sudo apt install snapd
 ```
 
-!!! Note:
-    A reboot will be needed after having installed `snapd` on Trusty since a
-    new kernel (4.4.0 series) will be installed as a dependency.
+[note]
+A reboot will be needed after having installed `snapd` on Trusty since a
+new kernel (4.4.0 series) will be installed as a dependency.
+[/note]
 
 Juju can be installed with the following command:
 
@@ -72,9 +71,10 @@ You can now install Juju with:
 sudo snap install juju --classic
 ```
 
-!!! Note:
-    The `--classic` flag is not supported on all distros. In that case, you'll
-    need to use `--devmode` instead.
+[note]
+The `--classic` flag is not supported on all distros. In that case, you'll
+need to use `--devmode` instead.
+[/note]
 
 For CentOS, you can download Juju from the following archive and install it
 manually:
@@ -144,8 +144,9 @@ sudo add-apt-repository -yu ppa:juju/devel
 sudo apt install juju
 ```
 
-!!! Note:
-    The alpha builds are only available with snaps (via the 'edge' channel).
+[note]
+The alpha builds are only available with snaps (via the 'edge' channel).
+[/note]
 
 ### Other platforms
 

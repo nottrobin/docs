@@ -1,5 +1,3 @@
-Title: Groups of applications  
-
 # Grouping applications
 
 Juju deploys units of an application from a charm. The simplest way to do this 

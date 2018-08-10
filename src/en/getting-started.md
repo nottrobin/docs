@@ -1,5 +1,3 @@
-Title: Getting started with Juju
-
 # Getting started with Juju
 
 Juju works with public clouds, private clouds, and locally with LXD. A central
@@ -156,9 +154,10 @@ change to grey to indicate an idle state, and the pending notices (amber
 circles) on the left will disappear to show that everything is working as
 expected.
 
-!!! Tip:
-    You can check and manage existing models through the JAAS web UI by
-    clicking on your username.
+[note]
+You can check and manage existing models through the JAAS web UI by
+clicking on your username.
+[/note]
 
 ## Use the command line
 

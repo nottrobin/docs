@@ -1,5 +1,7 @@
-Title: Concepts and terms
-TODO:  developer-layers-interfaces.md also includes definitions
+<!--
+Todo:
+- developer-layers-interfaces.md also includes definitions
+-->
 
 # Concepts and terms
 

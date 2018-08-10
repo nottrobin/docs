@@ -1,5 +1,3 @@
-Title: Application configuration
-
 # Application Configuration
 
 When deploying an application, the charm you use will often support or even
@@ -48,10 +46,11 @@ and configured in this way:
 juju deploy --config myconfig.yaml mediawiki
 ```
 
-!!! Warning:
-    If the configuration file cannot be read or contains syntax errors or
-    invalid options, an error message will be printed to this effect. However,
-    **the application will still be deployed **.
+[note=caution]
+If the configuration file cannot be read or contains syntax errors or
+invalid options, an error message will be printed to this effect. However,
+**the application will still be deployed **.
+[/note]
 
 To pass the options directly:
 

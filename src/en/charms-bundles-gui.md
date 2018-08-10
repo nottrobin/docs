@@ -1,5 +1,9 @@
-Title: Using bundles with the GUI
-TODO:  Critical: review required
+<!--
+Todo:
+- Critical: review required
+-->
+
+# Using bundles with the GUI
 
 ## Adding bundles with the GUI
 

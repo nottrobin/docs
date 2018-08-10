@@ -1,5 +1,7 @@
-Title: Using Rackspace with Juju
-TODO:  Review required
+<!--
+Todo:
+- Review required
+-->
 
 # Using Rackspace with Juju
 

@@ -1,6 +1,3 @@
-Title: Juju workflow scenarios
-
-
 # Workflow scenarios
 
 To demonstrate multi-user interaction, we present several workflows. It is

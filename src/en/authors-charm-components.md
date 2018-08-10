@@ -1,5 +1,3 @@
-Title: Components of a charm  
-
 # What makes a Charm?
 
 Each charm is a structured bundle of files. Conceptually, charms are composed of

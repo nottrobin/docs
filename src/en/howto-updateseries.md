@@ -1,6 +1,8 @@
-Title: Update the series of a controller or machine
-TODO:  Warning: Juju versions hardcoded
-       Should eventually remove the two "prior to 2.3" Notes
+<!--
+Todo:
+- Warning: Juju versions hardcoded
+- Should eventually remove the two "prior to 2.3" Notes
+-->
 
 # Update the series of a controller or machine
 
@@ -84,18 +86,20 @@ In some cloud environments, there may not be the resources to update using the
 above recommended method. Instead we need to upgrade the existing machine
 manually and update the agent data, as shown here:
 
-!!! Negative "Warning":
-    This method should be approached with caution. After the series is updated
-    on an existing machine, the unit agent may not restart cleanly depending on
-    software dependencies (e.g. software installed with `pip` may need to be
-    installed in a new location or an application's version was updated
-    without intent).
+[note=negative title="Warning"]
+This method should be approached with caution. After the series is updated
+on an existing machine, the unit agent may not restart cleanly depending on
+software dependencies (e.g. software installed with `pip` may need to be
+installed in a new location or an application's version was updated
+without intent).
+[/note]
 
 #### Update series for new units
 
-!!! Note:
-    If you are using a version of Juju prior to 2.3 follow the instructions for
-    [updating an application's series][app-update].
+[note]
+If you are using a version of Juju prior to 2.3 follow the instructions for
+[updating an application's series][app-update].
+[/note]
 
 Let Juju know what series should be used for any new units of the application:
 
@@ -105,9 +109,10 @@ juju set-series ghost xenial
 
 #### Upgrade the existing machine
 
-!!! Note:
-    If you are using a version prior to 2.3 follow the instructions for
-    [updating an machine's series][mach-update].
+[note]
+If you are using a version prior to 2.3 follow the instructions for
+[updating an machine's series][mach-update].
+[/note]
 
 Start by logging in to the machine:
 
@@ -124,12 +129,13 @@ versions of configuration files.
 
 #### Update agent data on the upgraded machine
 
-!!! Negative "Warning":
-    If the Python version has changed between the two series **and** the charm
-    uses `pip` to install packages then it will be necessary to force the unit
-    to install the new Python packages by running the following command on the
-    unit's machine prior to restarting the unit's service:
-    `sudo rm /var/lib/juju/agents/unit*/charm/wheelhouse/.bootstrapped` .
+[note=negative title="Warning"]
+If the Python version has changed between the two series **and** the charm
+uses `pip` to install packages then it will be necessary to force the unit
+to install the new Python packages by running the following command on the
+unit's machine prior to restarting the unit's service:
+`sudo rm /var/lib/juju/agents/unit*/charm/wheelhouse/.bootstrapped` .
+[/note]
 
 Update the agent data on the newly updated machine/unit appropriate for the new
 series and restart the agents:

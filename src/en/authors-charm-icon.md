@@ -1,5 +1,3 @@
-Title: Creating icons for charms  
-
 # Creating icons for charms
 
 In order to make your charm recognisable in the Charm Store, it is best

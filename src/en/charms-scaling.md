@@ -1,5 +1,7 @@
-Title: Scaling applications
-TODO:  More direction ito how users discover "built-in scaling" (e.g. the store is not clear on wordpress)
+<!--
+Todo:
+- More direction ito how users discover "built-in scaling" (e.g. the store is not clear on wordpress)
+-->
 
 # Scaling applications
 
@@ -28,10 +30,11 @@ This is accomplished via the `add-machine` command:
 juju add-machine
 ```
 
-!!! Note:
-    A machine provisioned via the `add-machine` command that does not yet house
-    an application unit will, by default, be used for any subsequent
-    application deployment (via the `deploy` command).
+[note]
+A machine provisioned via the `add-machine` command that does not yet house
+an application unit will, by default, be used for any subsequent
+application deployment (via the `deploy` command).
+[/note]
 
 ### Scaling up behind a load balancer
 
@@ -116,10 +119,11 @@ host machine '24':
 juju add-unit mysql --to 24/lxc/3
 ```
 
-!!! Note:
-    Not all applications will happily co-exist (usually due to conflicting
-    configuration files). It is therefore generally safer to place units on
-    dedicated machines or containers.
+[note]
+Not all applications will happily co-exist (usually due to conflicting
+configuration files). It is therefore generally safer to place units on
+dedicated machines or containers.
+[/note]
 
 Here we add a unit of MySQL to a **new** LXC container on host machine 25:
 

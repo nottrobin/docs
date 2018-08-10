@@ -1,5 +1,3 @@
-Title: Working offline
-
 # Working offline
 
 The objective of this page is to assist users who find themselves deploying

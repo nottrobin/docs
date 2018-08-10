@@ -1,5 +1,3 @@
-Title: Adding a model
-
 # Adding a model
 
 A Juju [controller][controller] can host multiple models to accommodate

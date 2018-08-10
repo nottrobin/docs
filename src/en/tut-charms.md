@@ -1,9 +1,22 @@
-Title: Introduction to Juju charms  
-TODO: Add images
-      To add (notes from PR #1093):
-      1. charms may be different depending on target OS
-      2. can choose which charm to use; can deploy on a series that it doesn't claim to
-	support
+<!--
+Todo:
+- Add images
+- To add (notes from PR #1093):
+- 1. charms may be different depending on target OS
+- 2. can choose which charm to use; can deploy on a series that it doesn't claim to
+- support
+- 3. however, to have things 'just work', don't bother specifying anything and the
+- charm will decide which OS/version to use
+- Should probably link to charms-exposing.md instead of repeating
+- The Scaling back section should just reference charms-scaling.html
+- The Removing applications section should just reference charms-destroy.html
+- This looks like a journey/walkthrough. Consider making a real one and modifying this page
+- Removing mediawiki gives the sense that we're back to square one but mariadb and haproxy are left dangling
+-->
+
+# Introduction to Juju charms
+
+support
       3. however, to have things 'just work', don't bother specifying anything and the
 	charm will decide which OS/version to use
       Should probably link to charms-exposing.md instead of repeating
@@ -48,11 +61,12 @@ you should gain an understanding of:
  - Removing applications
  - Destroying your model
 
-!!! Important:
-    These instructions assume that you have already added credentials for
-    your cloud. If you have not yet done this, please see
-    [Cloud credentials][credentials] first. You can also learn about clouds
-    on the central [Clouds][clouds] page.
+[note=caution]
+These instructions assume that you have already added credentials for
+your cloud. If you have not yet done this, please see
+[Cloud credentials][credentials] first. You can also learn about clouds
+on the central [Clouds][clouds] page.
+[/note]
 
 A 'default' model is created automatically when you create a controller and
 it's the model that will be used here. The controller used here is named

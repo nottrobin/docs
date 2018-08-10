@@ -1,5 +1,7 @@
-Title: Application high availability
-TODO: Critical: review required
+<!--
+Todo:
+- Critical: review required
+-->
 
 # Application high availability
 
@@ -15,9 +17,10 @@ ensure high availability. As long as the charm and the charm's application are
 well written, you can rest assured that IaaS downtime will not affect your
 application.
 
-!!! Note:
-    See [High Availability][controller-ha] for details on enabling high
-    availability for the controller.
+[note]
+See [High Availability][controller-ha] for details on enabling high
+availability for the controller.
+[/note]
 
 Commands you already use for scaling now ensure your applications are always
 available. e.g.
@@ -65,10 +68,11 @@ disabled only when bootstrapping the cloud by adding
 juju bootstrap --config availability-sets-enabled=false azure mycloud
 ```
 
-!!! Note: 
-    By disabling availability sets, you will lose Azure's SLA guarantees.
-    See [Azure SLA][azure-sla] to learn how availability sets affect uptime
-    guarantees.
+[note]
+By disabling availability sets, you will lose Azure's SLA guarantees.
+See [Azure SLA][azure-sla] to learn how availability sets affect uptime
+guarantees.
+[/note]
 
 Once an environment has been bootstrapped, you cannot change whether it uses
 availability sets. You would have to tear it down and create a new
@@ -80,9 +84,10 @@ is placed into a different zone.  With sets, Juju places each unit of a
 distribution group into the same set, and Azure will then try to ensure that
 not all units in the set will become unavailable at the same time.
 
-!!! Note:
-    Availability sets are not enforced when unit placement (i.e. the `--to`
-    option for the `deploy` or `add-unit` commands) is used. 
+[note]
+Availability sets are not enforced when unit placement (i.e. the `--to`
+option for the `deploy` or `add-unit` commands) is used.
+[/note]
 
 
 <!-- LINKS -->

@@ -1,5 +1,3 @@
-Title: Managing relations
-
 # Managing relations
 
 Few applications are so simple that they can run independently - most rely on
@@ -10,10 +8,11 @@ charms causes code (*hooks*) to run in each charm in such a way that both
 charms can effectively talk to one another. When charms have joined logically
 in this manner they are said to have formed a *relation*.
 
-!!! Note:
-    A criteria for forming a relation is that both applications are currently
-    *deployed*. See the [Deploying applications][charms-deploying] page for
-    guidance.
+[note]
+A criteria for forming a relation is that both applications are currently
+*deployed*. See the [Deploying applications][charms-deploying] page for
+guidance.
+[/note]
 
 ## Creating relations
 
@@ -56,12 +55,13 @@ the error message). Therefore, the command becomes:
 juju add-relation mysql mediawiki:db
 ```
 
-!!! Note:
-    An application endpoint can be discovered by looking at the metadata of the
-    corresponding charm. This can be done by examining the charm on the
-    [Charm Store][charm-store] or by querying the Store with the
-    [Charm Tools][charm-tools] (using a command like
-    `charm show &lt;application&gt; charm-metadata`).
+[note]
+An application endpoint can be discovered by looking at the metadata of the
+corresponding charm. This can be done by examining the charm on the
+[Charm Store][charm-store] or by querying the Store with the
+[Charm Tools][charm-tools] (using a command like
+`charm show &lt;application&gt; charm-metadata`).
+[/note]
 
 The output to `juju status --relations` will display the relations:
 

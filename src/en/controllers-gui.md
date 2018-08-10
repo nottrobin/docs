@@ -1,5 +1,7 @@
-Title: The Juju GUI
-TODO: some screenshots show 'services' rather than 'applications'
+<!--
+Todo:
+- some screenshots show 'services' rather than 'applications'
+-->
 
 # The Juju GUI
 
@@ -41,10 +43,11 @@ Your login credential is:
 If you don't want to copy and paste the URL manually, typing `juju gui
 --browser` will open the link in your default browser automatically.
 
-!!! Note: 
-    If you are deploying behind a firewall, make sure to check out the 
-    charm's [README](https://jujucharms.com/juju-gui/) for more information on 
-    getting the GUI up and running and talking to your environment.
+[note]
+If you are deploying behind a firewall, make sure to check out the 
+charm's [README](https://jujucharms.com/juju-gui/) for more information on 
+getting the GUI up and running and talking to your environment.
+[/note]
 
 Your browser will give you an error message when you open the URL warning that
 the site certificate should not be trusted. This is because Juju is generating
@@ -187,10 +190,11 @@ along with all of their metadata, in a read-only mode, meaning that you will not
 be able to make changes to the environment through the GUI. This is good for a
 monitoring type scenario.
 
-!!! Note: 
-    read-only mode in the GUI simply prevents actions taken within the 
-    GUI from being sent to Juju, and is _not_ additional security 
-    against the Juju API.
+[note]
+read-only mode in the GUI simply prevents actions taken within the 
+GUI from being sent to Juju, and is _not_ additional security 
+against the Juju API.
+[/note]
 
 
 

@@ -1,5 +1,3 @@
-Title: Creating an AWS VPC
-
 # Creating an AWS VPC
 
 This is in connection with [Juju and Fan networking][charms-fan] where an AWS
@@ -59,9 +57,10 @@ need to refer to a VPC by its ID. Take note of it. It has the format
 `vpc-HHHHHHHH` where each 'H' represents a hexadecimal number (e.g.
 'vpc-2434a45c').
 
-!!! Warning:
-    While working with VPCs be careful to not delete the wrong one by mistake.
-    Doing so will destroy all associated instances.
+[note=caution]
+While working with VPCs be careful to not delete the wrong one by mistake.
+Doing so will destroy all associated instances.
+[/note]
 
 
 <!-- LINKS -->

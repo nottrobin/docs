@@ -1,7 +1,9 @@
-Title: Using Juju Storage
-TODO:  bug tracking: https://pad.lv/1708212
-       bug tracking: https://pad.lv/1709507
-       bug tracking: https://pad.lv/1709508
+<!--
+Todo:
+- bug tracking: https://pad.lv/1708212
+- bug tracking: https://pad.lv/1709507
+- bug tracking: https://pad.lv/1709508
+-->
 
 # Using Juju Storage
 
@@ -137,9 +139,10 @@ rootfs   rootfs
 tmpfs    tmpfs
 ```
 
-!!! Note:
-    The name given to a default storage pool will often be the same as the
-    name of the storage provider upon which it is based.
+[note]
+The name given to a default storage pool will often be the same as the
+name of the storage provider upon which it is based.
+[/note]
 
 Depending on the storage provider (see [below][anchor__storage-providers]),
 custom storage pools can be created. In the case of AWS, the 'ebs' storage
@@ -218,8 +221,9 @@ To detach OSD device 'osd-devices/2' from a Ceph unit:
 juju detach-storage osd-devices/2
 ```
 
-!!! Important:
-    Detaching storage from a unit does not destroy the storage.
+[note=caution]
+Detaching storage from a unit does not destroy the storage.
+[/note]
 
 ### Persistence
 
@@ -258,8 +262,9 @@ To deploy PostgreSQL with (detached) existing storage 'pgdata/0':
 juju deploy postgresql --attach-storage pgdata/0
 ```
 
-!!! Note:
-    The `--attach-storage` and `-n` flags cannot be used together.
+[note]
+The `--attach-storage` and `-n` flags cannot be used together.
+[/note]
 
 To add a new Ceph OSD unit with (detached) existing storage 'osd-devices/2':
 
@@ -345,9 +350,10 @@ If such a constraint was not provided, 'rootfs' would be used (as described in
 the section on deploying with
 [storage constraints][anchor__storage-constraints-juju-deploy]).
 
-!!! Warning:
-    Specifying new constraints may be necessary when upgrading to a revision of
-    a charm that introduces new, required, storage options.
+[note=caution]
+Specifying new constraints may be necessary when upgrading to a revision of
+a charm that introduces new, required, storage options.
+[/note]
 
 ## Storage providers
 
@@ -465,11 +471,12 @@ provider currently supports a single pool configuration attribute:
 
 ### LXD (lxd)
 
-!!! Note:
-    The regular package archives for Ubuntu 14.04 LTS (Trusty) and Ubuntu 16.04
-    LTS (Xenial) do not include a version of LXD that has the 'lxd' storage
-    provider feature. You will need at least version 2.16. See the
-    [Using LXD with Juju][clouds-lxd] page for installation help.
+[note]
+The regular package archives for Ubuntu 14.04 LTS (Trusty) and Ubuntu 16.04
+LTS (Xenial) do not include a version of LXD that has the 'lxd' storage
+provider feature. You will need at least version 2.16. See the
+[Using LXD with Juju][clouds-lxd] page for installation help.
+[/note]
 
 LXD-based models have access to the 'lxd' storage provider. The LXD provider
 has two configuration options:

@@ -1,5 +1,7 @@
-Title: Using Amazon AWS with Juju
-TODO:  Review required (use style from the other cloud pages)
+<!--
+Todo:
+- Review required (use style from the other cloud pages)
+-->
 
 # Using Amazon AWS with Juju
 

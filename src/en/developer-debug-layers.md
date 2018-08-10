@@ -1,5 +1,3 @@
-Title: Debugging building layers  
-
 # Debugging Building Layers
 
 While building from charm layers is a quick and easy process most of the time,

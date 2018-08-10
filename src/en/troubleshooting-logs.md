@@ -1,6 +1,8 @@
-Title: Juju logs  
-TODO:  Remote logging: strongly consider adding a sub-page (rsyslog TLS tutorial)
-       Remote logging: need to state whether server-side and/or client-side auth is a requirement
+<!--
+Todo:
+- Remote logging: strongly consider adding a sub-page (rsyslog TLS tutorial)
+- Remote logging: need to state whether server-side and/or client-side auth is a requirement
+-->
 
 # Juju logs
 
@@ -193,8 +195,9 @@ machine in the entire log:
 juju debug-log --replay --include unit-mysql-0 --include machine-1
 ```
 
-!!! Note: 
-    The unit can also be written 'mysql/0' (as shown by `juju status`).
+[note]
+The unit can also be written 'mysql/0' (as shown by `juju status`).
+[/note]
 
 To see all WARNING and ERROR messages in the entire log:
 
@@ -290,11 +293,12 @@ File `logsink.log` contains logs for all models managed by the controller. Its
 contents get sent to the database where it is consumed by the `debug-log`
 command.
 
-!!! Note: 
-    In a [High availability][controllers-ha] scenario, `logsink.log` is not
-    guaranteed to contain all messages since agents have a choice of several
-    controllers to send their logs to. The `debug-log` command should be used
-    for accessing consolidated data across all controllers.
+[note]
+In a [High availability][controllers-ha] scenario, `logsink.log` is not
+guaranteed to contain all messages since agents have a choice of several
+controllers to send their logs to. The `debug-log` command should be used
+for accessing consolidated data across all controllers.
+[/note]
 
 ## Remote logging
 

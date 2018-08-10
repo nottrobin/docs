@@ -1,5 +1,3 @@
-Title: Reviewing charms and bundles  
-
 # Reviewing Charms and Bundles
 
 ### Review Tips and Criteria

@@ -1,5 +1,7 @@
-Title: Offline mode strategies
-TODO:  Give an example of assigning multiple assertions to `snap-store-assertions`  
+<!--
+Todo:
+- Give an example of assigning multiple assertions to `snap-store-assertions`
+-->
 
 # Offline mode strategies
 
@@ -103,18 +105,20 @@ JUJU_CHARM_HTTP_PROXY
 JUJU_CHARM_HTTPS_PROXY  
 JUJU_CHARM_NO_PROXY
 
-!!! Important:
-    These Juju-specific proxy settings are incompatible with the four
-    corresponding legacy proxy settings described in earlier sections. Data
-    validation is enabled to prevent collisions from occurring.
+[note=caution]
+These Juju-specific proxy settings are incompatible with the four
+corresponding legacy proxy settings described in earlier sections. Data
+validation is enabled to prevent collisions from occurring.
+[/note]
 
 One big benefit of using these finely-scoped settings is that `juju-no-proxy`
 can contain subnets (in CIDR notation) whereas its legacy counterpart cannot.
 
-!!! Note:
-    Work is underway to introduce further granularity that will allow specific
-    libraries (e.g. `charm-helpers`) to enable a proxy setting on a per-call
-    basis.
+[note]
+Work is underway to introduce further granularity that will allow specific
+libraries (e.g. `charm-helpers`) to enable a proxy setting on a per-call
+basis.
+[/note]
 
 ## Snap-specific proxy
 
@@ -246,10 +250,11 @@ mkdir -p /home/ubuntu/tmp/agents
 juju sync-agent-binaries --version 2.3 --local-dir=/home/ubuntu/tmp/agents-2.3
 ```
 
-!!! Note:
-    Once the agents are downloaded, the `juju sync-agent-binaries` command can
-    also be used to push them to a model, thereby foregoing the need for a
-    mirror.
+[note]
+Once the agents are downloaded, the `juju sync-agent-binaries` command can
+also be used to push them to a model, thereby foregoing the need for a
+mirror.
+[/note]
 
 ## Cloud images mirror
 

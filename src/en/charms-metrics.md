@@ -1,5 +1,3 @@
-Title: Juju Metrics
-
 # Application metrics
 
 Knowing an application's configuration isn’t enough to effectively operate and

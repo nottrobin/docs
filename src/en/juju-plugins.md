@@ -1,5 +1,3 @@
-Title: Juju plugins
-
 # Juju plugins
 
 Plugins are commands which work with Juju, but which are not part of the core

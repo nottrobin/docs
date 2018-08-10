@@ -1,5 +1,3 @@
-Title: Charm Layer.yaml Reference
-
 # Layer.yaml
 
 Each layer used to build a charm can have a `layer.yaml` file. The top layer

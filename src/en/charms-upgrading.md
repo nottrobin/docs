@@ -1,15 +1,14 @@
-Title: Upgrading applications
-
 # Upgrading applications
 
 An application is upgraded with the `upgrade-charm` command, where the upgrade
 candidate is known as the *revision*. The default channel is naturally the
 channel of the currently deployed charm.
 
-!!! Note:
-    It is possible, though unlikely, that the revision is **older** than that
-    of the deployed application. In this case, the application will actually be
-    **downgraded** (to the revision).
+[note]
+It is possible, though unlikely, that the revision is **older** than that
+of the deployed application. In this case, the application will actually be
+**downgraded** (to the revision).
+[/note]
 
 The notion of a *channel* is related to revision numbers. See
 [Deploying applications][deploy-charm_channels] for an overview of channels.
@@ -91,9 +90,10 @@ To upgrade Apache using a local updated charm:
 juju upgrade-charm apache2 --path ~/charms/apache2
 ```
 
-!!! Note:
-    The above implies the application was originally deployed locally.
-    The path must be the same in both cases (deployed and upgraded).
+[note]
+The above implies the application was originally deployed locally.
+The path must be the same in both cases (deployed and upgraded).
+[/note]
 
 To crossgrade MySQL with a local charm:
 

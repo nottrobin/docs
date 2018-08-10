@@ -1,5 +1,3 @@
-Title: Using JAAS from the command line
-
 # Using JAAS from the command line
 
 The Juju controller you already have running in JAAS can also be used

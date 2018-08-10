@@ -1,6 +1,8 @@
-Title: Using OpenStack with Juju
-TODO:  Review required (use style from the other cloud pages)
-       Enhance interactive credentials section
+<!--
+Todo:
+- Review required (use style from the other cloud pages)
+- Enhance interactive credentials section
+-->
 
 # Using OpenStack with Juju
 

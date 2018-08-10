@@ -1,6 +1,8 @@
-Title: CMR scenario #2
-TODO:  Update 'juju status' output to show release versions
-       Review required
+<!--
+Todo:
+- Update 'juju status' output to show release versions
+- Review required
+-->
 
 # CMR scenario #2
 
@@ -136,10 +138,11 @@ Offer  User   Relation id  Status  Endpoint  Interface  Role      Ingress subnet
 mysql  admin  1            joined  db        mysql      provider  10.252.47.222/32
 ```
 
-!!! Note:
-    This command can also filter what offers are included in the result. Note
-    that, for brevity, the scenario model is not specified in the below
-    examples.
+[note]
+This command can also filter what offers are included in the result. Note
+that, for brevity, the scenario model is not specified in the below
+examples.
+[/note]
 
 To list all offers for a given application:
 

@@ -1,12 +1,13 @@
-Title: Clouds
-TODO:  Bug tracking: https://bugs.launchpad.net/juju/+bug/1749302
-       Bug tracking: https://bugs.launchpad.net/juju/+bug/1749583
-       INFO: Auth types found at ~/.local/share/juju/public-clouds.yaml
-       There is contention whether access-key can be used with keystone v3 (see https://github.com/juju/docs/issues/2868)
-       Needs to be updated for the new Oracle cloud (OCI)
-       Update: Juju is growing an authentication type for OpenStack: certificates
-       Update: Juju is growing add-cloud for (remote) LXD
-table_of_contents: True
+<!--
+Todo:
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1749302
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1749583
+- INFO: Auth types found at ~/.local/share/juju/public-clouds.yaml
+- There is contention whether access-key can be used with keystone v3 (see https://github.com/juju/docs/issues/2868)
+- Needs to be updated for the new Oracle cloud (OCI)
+- Update: Juju is growing an authentication type for OpenStack: certificates
+- Update: Juju is growing add-cloud for (remote) LXD
+-->
 
 # Clouds
 
@@ -67,9 +68,10 @@ cloud name, the number of cloud regions Juju is aware of, the default region
 (for the current Juju client), the type/API used to control it, and a brief
 description.
 
-!!! Important:
-    The cloud name (e.g. 'aws', 'localhost') is what you will use in any
-    subsequent Juju commands to refer to a cloud.
+[note=caution]
+The cloud name (e.g. 'aws', 'localhost') is what you will use in any
+subsequent Juju commands to refer to a cloud.
+[/note]
 
 To see which regions Juju is aware of for any given cloud use the `regions`
 command. For the 'aws' cloud then:

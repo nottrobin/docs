@@ -1,5 +1,3 @@
-Title: The hook environment, hook tools and how hooks are run
-
 # How hooks are run
 
 When a charm is deployed onto a unit, the raw charm is extracted into a
@@ -62,10 +60,11 @@ charm only. Finally, in all cases:
     tools to work: juju _does_ pay attention to them, but you should treat
     them as opaque and avoid messing with them.
 
-!!! Note:
-    `juju run` runs commands in a Juju context and sets a value for
-    `$JUJU_CONTEXT_ID` each time it is used. This is what enables you to run hook
-    tools.
+[note]
+`juju run` runs commands in a Juju context and sets a value for
+`$JUJU_CONTEXT_ID` each time it is used. This is what enables you to run hook
+tools.
+[/note]
 
 So, if you use `juju run` on a system with a unit `haproxy/0`, like this:
 
@@ -111,10 +110,11 @@ the current remote unit is set as the default.
 To use relation hooks effectively, you should spend time making sure you
 understand the [relation model](./authors-relations-in-depth.html).
 
-!!! Note:
-    Remember that all commands that produce output accept `--format json`
-    and `--format yaml`, and you may consider it smarter to use those for clarity's
-    sake than to depend on the default `smart` format.
+[note]
+Remember that all commands that produce output accept `--format json`
+and `--format yaml`, and you may consider it smarter to use those for clarity's
+sake than to depend on the default `smart` format.
+[/note]
 
 ### juju-log
 
@@ -221,9 +221,10 @@ config-get [key-with-no-default]
 config-get [missing-key]
 ```
 
-!!! Note:
-    The above two examples are not misprints - asking for a value which
-    doesn't exist or has not been set returns nothing and raises no errors.
+[note]
+The above two examples are not misprints - asking for a value which
+doesn't exist or has not been set returns nothing and raises no errors.
+[/note]
 
 ### open-port
 
@@ -307,10 +308,11 @@ For example, running `opened-ports` may return:
 81/tcp
 ```
 
-!!! Note:
-    Opening ports is transactional (i.e. will take place on successfully
-    exiting the current hook), and therefore `opened-ports` will not return any
-    values for pending `open-port` operations run from within the same hook.
+[note]
+Opening ports is transactional (i.e. will take place on successfully
+exiting the current hook), and therefore `opened-ports` will not return any
+values for pending `open-port` operations run from within the same hook.
+[/note]
 
 
 ### relation-set
@@ -442,14 +444,15 @@ sufficient to complete all configuration that depends on remote unit settings.
 Settings for remote units already known to have departed remain accessible for
 the lifetime of the relation.
 
-!!! Note:
-    `relation-get` currently has a
-    [bug](https://bugs.launchpad.net/juju-core/+bug/1223339)
-    that allows units of the same application to see each other's
-    settings outside of a peer relation. Depending on this behaviour inadvisable: if
-    you need to share settings between units of the same application, always use a
-    peer relation to do so, or you may be seriously inconvenienced when
-    the hole is closed without notice.
+[note]
+`relation-get` currently has a
+[bug](https://bugs.launchpad.net/juju-core/+bug/1223339)
+that allows units of the same application to see each other's
+settings outside of a peer relation. Depending on this behaviour inadvisable: if
+you need to share settings between units of the same application, always use a
+peer relation to do so, or you may be seriously inconvenienced when
+the hole is closed without notice.
+[/note]
 
 ### relation-list
 

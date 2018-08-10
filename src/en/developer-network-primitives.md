@@ -1,5 +1,3 @@
-Title: Charm Network Primitives
-
 # Network Primitives
 
 The `network-get` hook tool allows charms to discover important network related

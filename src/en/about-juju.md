@@ -1,5 +1,3 @@
-Title: What is Juju?  
-
 # What is Juju?
 
 Juju is a state-of-the-art, open source modelling tool for operating software

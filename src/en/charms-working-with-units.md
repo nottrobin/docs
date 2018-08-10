@@ -1,5 +1,3 @@
-Title: Working with units  
-
 # Using Units
 
 Each node that Juju manages is referred to as a "unit". Generally speaking,
@@ -63,11 +61,12 @@ Copy a local file to the second apache2 unit in the model "testing":
 juju scp -m testing foo.txt apache2/1:
 ```
 
-!!! Note:
-    Juju cannot transfer files between two remote units because it uses public
-    key authentication exclusively and the native (OpenSSH) `scp` command disables
-    agent forwarding by default. Either the destination or the source must be local
-    (Juju client).
+[note]
+Juju cannot transfer files between two remote units because it uses public
+key authentication exclusively and the native (OpenSSH) `scp` command disables
+agent forwarding by default. Either the destination or the source must be local
+(Juju client).
+[/note]
 
 For more information, run the `juju help scp` command.
 
@@ -92,11 +91,12 @@ juju run "uptime" --machine=2
 juju run "uptime" --application=mysql
 ```
 
-!!! Note: 
-    When using `juju run` with the `--application` option, keep in mind
-    that whichever command you pass will run on *every unit* of that application.
-    When using `juju run` with the `--machine` option, the command is run as the
-    `root` user on the remote machine.
+[note]
+When using `juju run` with the `--application` option, keep in mind
+that whichever command you pass will run on *every unit* of that application.
+When using `juju run` with the `--machine` option, the command is run as the
+`root` user on the remote machine.
+[/note]
 
 When used in combination with certain applications you can script certain tasks.
 For instance, in the 'hadoop' charm you can use `juju run` to initiate a

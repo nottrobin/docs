@@ -1,6 +1,8 @@
-Title: Troubleshooting
-TODO: Logs from the machines/applications
-      Review required (factoid: there are 12 instances of the word 'details')
+<!--
+Todo:
+- Logs from the machines/applications
+- Review required (factoid: there are 12 instances of the word 'details')
+-->
 
 # Troubleshooting
 
@@ -35,9 +37,10 @@ The default output from `juju status` uses a tabular format to fit as much
 detail as possible into a terminal. However, by specifying `yaml` as an output
 format, additional details are included in its serialised output. 
 
-!!! Note:
-    When filing bugs and requesting help it's almost always better to use the
-    YAML format so that everyone has additional insight into what's going on.
+[note]
+When filing bugs and requesting help it's almost always better to use the
+YAML format so that everyone has additional insight into what's going on.
+[/note]
 
 To see all the details on a deployed 'mysql' application, enter the following:
 
@@ -168,9 +171,10 @@ particular, the message within the 'machine-status' sub-section indicates that
 there is no Windows image available for this deployment. This is what's holding
 up the deployment of 'active-directory'. 
 
-!!! Note:
-    The `show-machine` command defaults to YAML output without any further
-    arguments.
+[note]
+The `show-machine` command defaults to YAML output without any further
+arguments.
+[/note]
 
 Juju includes the following *show-* commands to help provide more details on
 specific areas of your deployment:

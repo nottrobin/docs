@@ -1,7 +1,8 @@
-Title: Deploying applications
-TODO: Add 'centos' and 'windows' stuff to series talk
-      Hardcoded: Ubuntu codenames
-table_of_contents: True
+<!--
+Todo:
+- Add 'centos' and 'windows' stuff to series talk
+- Hardcoded: Ubuntu codenames
+-->
 
 # Deploying applications
 
@@ -41,9 +42,10 @@ juju deploy cs:xenial/mysql
 
 Where 'cs' denotes the Charm Store.
 
-!!! Note:
-    A used charm gets cached on the controller's database to minimize network
-    traffic for subsequent uses.
+[note]
+A used charm gets cached on the controller's database to minimize network
+traffic for subsequent uses.
+[/note]
 
 A custom name, such as 'mysql1', can be assigned to the application by
 providing an extra argument:

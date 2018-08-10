@@ -1,5 +1,3 @@
-Title: Charm store policy
-
 # Charm store policy
 
 This document serves to record the policies around charms and bundles included

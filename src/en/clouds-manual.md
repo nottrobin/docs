@@ -1,6 +1,8 @@
-Title: Using the Manual cloud with Juju
-TODO:  Bug tracking: https://bugs.launchpad.net/juju/+bug/1779917
-       QUESTION: Will Manual work if sudo is used on CentOS? Does root on Ubuntu work?
+<!--
+Todo:
+- Bug tracking: https://bugs.launchpad.net/juju/+bug/1779917
+- QUESTION: Will Manual work if sudo is used on CentOS? Does root on Ubuntu work?
+-->
 
 # Using the Manual cloud with Juju
 
@@ -21,10 +23,11 @@ client can also cause charms to be deployed automatically onto those
 newly-created machines. However, with a Manual cloud the machines must
 pre-exist and they must also be specifically targeted during charm deployment.
 
-!!! Note:
-    A MAAS cloud must also have pre-existing backing machines. However, Juju,
-    by default, can deploy charms onto those machines, or add a machine to its
-    pool of managed machines, without any extra effort.
+[note]
+A MAAS cloud must also have pre-existing backing machines. However, Juju,
+by default, can deploy charms onto those machines, or add a machine to its
+pool of managed machines, without any extra effort.
+[/note]
 
 ## Prerequisites
 
@@ -52,8 +55,9 @@ Your collection of machines (minus the controller machine) *must* be added to
 Juju by means of the `add-machine` command. A machine is specified by means of
 its IP address.
 
-!!! Important:
-    A Manual cloud requires at least one machine to be added.
+[note=caution]
+A Manual cloud requires at least one machine to be added.
+[/note]
 
 Finally, to deploy a charm the `deploy` command is used as normal. However, a
 machine *must* be targeted. This is accomplished with the `--to` option in
